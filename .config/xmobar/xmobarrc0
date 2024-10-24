@@ -1,0 +1,99 @@
+Config { 
+
+   -- appearance
+     font =         "xft:NotoSansMonoNerdFont:Bold:size=11:antialias=true:hinting=true"
+   , bgColor =      "black"
+   , fgColor =      "white"
+   , alpha = 0
+   , position =     Top
+   
+   -- layout
+   , iconRoot = "/home/phil/.config/xmobar/icons"
+   , sepChar =  "%"   -- delineator between plugin names and straight text
+   , alignSep = "}{"  -- separator between left-right alignment
+   , template = "%StdinReader% } <action=`xdg-open 'https://calendar.google.com/'` button=1>%date%</action> { %multicpu% %cpufreq% %multicoretemp% %memory% %disku% %diskio% %dynnetwork% %trayerpad%"
+
+   -- general behavior
+   , lowerOnStart =     True    -- send to bottom of window stack on start
+   , hideOnStart =      False   -- start with window unmapped (hidden)
+   , allDesktops =      True    -- show on all desktops
+   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
+   , pickBroadest =     False   -- choose widest display (multi-monitor)
+   , persistent =       True    -- enable/disable hiding (True = disabled)
+
+   -- plugins
+   --   Numbers can be automatically colored according to their value. xmobar
+   --   decides color based on a three-tier/two-cutoff system, controlled by
+   --   command options:
+   --     --Low sets the low cutoff
+   --     --High sets the high cutoff
+   --
+   --     --low sets the color below --Low cutoff
+   --     --normal sets the color between --Low and --High cutoffs
+   --     --High sets the color above --High cutoff
+   --
+   --   The --template option controls how the plugin is displayed. Text
+   --   color can be set by enclosing in <fc></fc> tags. For more details
+   --   see http://projects.haskell.org/xmobar/#system-monitor-plugins.
+   , commands = [
+
+        -- time and date indicator 
+        --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
+          Run Date           "<fc=#888888>\xf133</fc> %F (%a) %T" "date" 10
+
+        , Run StdinReader
+
+        -- cpu activity monitor
+        , Run MultiCpu       [ "--template" , "<fc=#888888>\xf85a</fc> <total>%"
+                             , "--Low"      , "50"         -- units: %
+                             , "--High"     , "80"         -- units: %
+                             , "--low"      , "#00AA00"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "red"
+                             ] 10
+
+        , Run CpuFreq        [ "--template" , "<cpu0>GHz"
+                             , "--Low"      , "1"
+                             , "--High"     , "3"
+                             , "--low"      , "#00AA00"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "red"
+                             ] 50
+
+        -- cpu core temperature monitor
+        , Run MultiCoreTemp  [ "--template" , "<max>°C"
+                             , "--Low"      , "70"        -- units: °C
+                             , "--High"     , "90"        -- units: °C
+                             , "--low"      , "#00AA00"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "red"
+                             ] 50
+                          
+        -- memory usage monitor
+        , Run Memory         [ "--template" ,"<fc=#888888>\xf2db</fc> <free>M"
+                             , "--Low"      , "4096"
+                             , "--High"     , "24576"
+                             , "--low"      , "red"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "#00AA00"
+                             ] 10
+
+        , Run DiskU          [ ("/", "<fc=#888888>\xf7c9</fc> / <fc=darkorange><free></fc>"), ("/home/phil/Data", "<fc=#888888>\xf7c9</fc> Data <fc=darkorange><free></fc>") ]
+                             [] 30
+
+        , Run DiskIO         [ ("/", "<fc=#888888>\xf7c9</fc> <read>/<write>"), ("/home/phil/Data", "<fc=#888888>\xf7c9</fc> <read>/<write>") ]
+                             [] 10
+
+        -- network activity monitor (dynamic interface resolution)
+        , Run DynNetwork     [ "--template" , "<fc=#888888>\xfaa8</fc> <dev> <fc=#888888>\xf0ed</fc> <rx>kB/s <fc=#888888>\xf0ee</fc> <tx>kB/s"
+                             , "--Low"      , "10000"       -- units: B/s
+                             , "--High"     , "300000"      -- units: B/s
+                             , "--low"      , "#00AA00"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "red"
+                             ] 10
+
+        -- Script that dynamically adjusts xmobar padding depending on number of trayer icons.
+        , Run Com "/home/phil/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 20
+   ]
+}
