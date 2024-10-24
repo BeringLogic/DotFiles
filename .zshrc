@@ -62,7 +62,7 @@ RPROMPT=""
 PROMPT="
 %B┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
 %B│ %j background jobs.)%b
-%B%(?..%{$fg[red]%})╰─>%(?.. [%?])%{$reset_color%}%b "
+%B╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
 PATH="${PATH}:/home/phil/Scripts"
 
