@@ -2,6 +2,16 @@
 
 This is a git repo for my dot files, maintained using GNU stow.
 
+Clone this repo, cd into it, then do this to install everything:
+```
+stow */
+```
+
+Or, to install only one package:
+```
+stow packagename
+```
+
 
 ## XMonad
 
