@@ -15,7 +15,7 @@ stow packagename
 
 ## XMonad
 
-![screenshot](Images/xmonad.png)
+![screenshot](Images/Images/xmonad.png)
 
 ### Left screen:
   - Spacing Magnified Reflected ResizableTall layout (renamed "Right" because the main window is on the right side)
