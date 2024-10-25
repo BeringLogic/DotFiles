@@ -1,5 +1,5 @@
-.config/xmonad/build-x86_64-linux/
-.config/xmonad/xmonad-x86_64-linux
-.config/xmonad/xmonad.errors
-.config/xmonad/xmonad.hi
-.config/xmonad/xmonad.o
+XMonad/.config/xmonad/build-x86_64-linux/
+XMonad/.config/xmonad/xmonad-x86_64-linux
+XMonad/.config/xmonad/xmonad.errors
+XMonad/.config/xmonad/xmonad.hi
+XMonad/.config/xmonad/xmonad.o
