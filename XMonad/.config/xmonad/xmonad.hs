@@ -161,7 +161,6 @@ myManageHook = composeAll
                    , className =? "Io.elementary.desktop.agent-polkit" --> doCenterFloat
                    , className =? "spectacle"             --> doCenterFloat
                    , title     =? "Open File"             --> doCenterFloat
-                   , title     =? "Code - OSS"            --> doCenterFloat
                    ]
 
 layoutColumns   = renamed [Replace "Columns"]
