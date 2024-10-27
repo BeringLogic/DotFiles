@@ -27,7 +27,7 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.SpawnOnce
 import qualified XMonad.StackSet as W
 
-myTerminal = "alacritty"
+myTerminal = "kitty"
 
 myStartupHook = do
                   spawnOnce "deadd-notification-center &"
