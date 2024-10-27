@@ -35,7 +35,7 @@ bindkey "\e[1;5C" forward-word
 
 # Aliases
 alias cat='bat'
-alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S"'
+alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
 alias ll='ls -l'
 alias la='ls -la'
 alias cd..='cd ..'
