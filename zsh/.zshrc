@@ -39,7 +39,7 @@ alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
 alias ll='ls -l'
 alias la='ls -la'
 alias cd..='cd ..'
-alias dust='dust -r'
+alias ncdu='ncdu --color dark'
 
 # Prompts (adapted from https://dotshare.it/dots/590)
 setopt prompt_subst
