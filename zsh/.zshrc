@@ -66,6 +66,9 @@ PROMPT="
 
 PATH="${PATH}:/home/phil/Scripts"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Autorun
 /usr/bin/cat ~/Images/manjaro-banner.logo
 echo
