@@ -45,6 +45,10 @@ alias cd..='cd ..'
 alias ncdu='ncdu --color dark'
 alias diskspace='du -Sh | sort -n -r | less'
 alias externalip='curl -s https://ringlogic.com/ip/'
+alias gits='git status'
+alias gita='git add'
+alias gitap='git add -p'
+alias gitc='git commit -m'
 
 
 # Copy and go to the directory
