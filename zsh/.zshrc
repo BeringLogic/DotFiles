@@ -109,10 +109,10 @@ PROMPT="
 %B│ %j background jobs.)%b
 %B╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
+
+# PATH
 PATH="${PATH}:/home/phil/Scripts"
 
-# Zoxide
-eval "$(zoxide init zsh)"
 
 # Autorun
 /usr/bin/cat ~/Images/manjaro-banner.logo
