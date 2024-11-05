@@ -5,3 +5,4 @@ XMonad/.config/xmonad/xmonad.hi
 XMonad/.config/xmonad/xmonad.o
 
 *.bak
+micro/.config/micro/backups
