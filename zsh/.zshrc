@@ -95,7 +95,7 @@ autoload colors; colors;
 
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
+  echo "─[\uea84 %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
 }
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
