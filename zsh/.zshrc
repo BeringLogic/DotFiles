@@ -43,6 +43,48 @@ alias ll='ls -l'
 alias la='ls -la'
 alias cd..='cd ..'
 alias ncdu='ncdu --color dark'
+alias diskspace='du -Sh | sort -n -r | less'
+alias externalip='curl -s https://ringlogic.com/ip/'
+
+
+# Copy and go to the directory
+cpg() {
+	if [ -d "$2" ]; then
+		cp "$1" "$2" && cd "$2"
+	else
+		cp "$1" "$2"
+	fi
+}
+
+# Move and go to the directory
+mvg() {
+	if [ -d "$2" ]; then
+		mv "$1" "$2" && cd "$2"
+	else
+		mv "$1" "$2"
+	fi
+}
+
+# Create and go to the directory
+mkdirg() {
+	mkdir -p "$1"
+	cd "$1"
+}
+
+# ll after cd or z
+function cd() {
+	builtin cd "$@"
+	ll
+}
+
+
+# Initialize Zoxide
+eval "$(zoxide init zsh)"
+function z() {
+    __zoxide_z "$@"
+    ll
+}
+
 
 # Prompts (adapted from https://dotshare.it/dots/590)
 setopt prompt_subst
