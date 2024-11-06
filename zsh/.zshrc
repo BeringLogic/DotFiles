@@ -111,9 +111,9 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 RPROMPT=""
 PROMPT="
-%B┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
-%B│ %j background jobs.)%b
-%B╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
+%B %{$fg[green]%} %{$reset_color%}─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
+%B    │ %j background jobs.)%b
+%B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
 
 # PATH
