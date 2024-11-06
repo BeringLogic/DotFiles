@@ -45,12 +45,13 @@ alias cd..='cd ..'
 alias ncdu='ncdu --color dark'
 alias diskspace='du -Sh | sort -n -r | less'
 alias externalip='curl -s https://ringlogic.com/ip/'
+alias ip='ip -c'
 alias gits='git status'
+alias gitd='git diff'
 alias gita='git add'
 alias gitap='git add -p'
 alias gitc='git commit -m'
 alias gitp='git push father && git push github'
-alias ip='ip -c'
 
 
 # Copy and go to the directory
@@ -103,6 +104,9 @@ function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
 }
+function distro_logo() {
+	echo "%{$fg[green]%} %{$reset_color%}"
+}
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 local user_host='%{$fg[green]%}%n@%m%{$reset_color%}'
@@ -111,7 +115,7 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 RPROMPT=""
 PROMPT="
-%B %{$fg[green]%} %{$reset_color%}─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
+%B $(distro_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
 %B    │ %j background jobs.)%b
 %B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
