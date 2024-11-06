@@ -100,12 +100,16 @@ setopt promptpercent
 
 autoload colors; colors;
 
-function git_prompt_info() {
+display_logo() {
+	if [[ $EUID == 0 ]]; then
+		echo "%{$fg[red]%}\ueb46 %{$reset_color%}"
+	else
+		echo "%{$fg[green]%} %{$reset_color%}"
+	fi
+}
+git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
-}
-function distro_logo() {
-	echo "%{$fg[green]%} %{$reset_color%}"
 }
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
@@ -115,7 +119,7 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 RPROMPT=""
 PROMPT="
-%B $(distro_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
+%B $(display_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
 %B    │ %j background jobs.)%b
 %B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
