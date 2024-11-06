@@ -49,6 +49,7 @@ alias gits='git status'
 alias gita='git add'
 alias gitap='git add -p'
 alias gitc='git commit -m'
+alias ip='ip -c'
 
 
 # Copy and go to the directory
