@@ -19,9 +19,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Autocomplete history file
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 
 # various flags
 unsetopt beep
@@ -83,6 +80,10 @@ function cd() {
 	builtin cd "$@"
 	ll
 }
+
+
+# Initialize fzf
+eval "$(fzf --zsh)"
 
 
 # Initialize Zoxide
