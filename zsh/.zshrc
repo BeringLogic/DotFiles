@@ -126,10 +126,6 @@ PROMPT="
 %B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
 
-# PATH
-PATH="${PATH}:/home/phil/Scripts"
-
-
 # Autorun
 /usr/bin/cat ~/Images/manjaro-banner.logo
 echo
