@@ -1,3 +1,23 @@
+# detect distribution
+distribution () {
+	dtype="unknown"
+
+    if [ -r /etc/os-release ]; then
+		source /etc/os-release
+		case $ID in
+		    debian)
+		        dtype="debian"
+		        ;;
+		    manjaro)
+				dtype="manjaro"
+				;;
+		esac
+	fi
+
+	echo $dtype
+}
+DISTRIBUTION=$(distribution)
+
 
 # History
 HISTFILE=~/.histfile
@@ -9,15 +29,22 @@ SAVEHIST=1000
 zstyle :compinstall filename '/home/phil/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
-autoload -Uz compinit
+if [ $EUID -gt 0 ]; then
+	autoload -Uz compinit
+fi
 
 
-# Autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-# Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh plugins
+case "$DISTRIBUTION" in
+	"manjaro")
+		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+		source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+		;;
+	"debian")
+		source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+		source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+		;;
+esac
 
 
 # various flags
@@ -35,7 +62,6 @@ bindkey "\e[1;5C" forward-word
 
 
 # Aliases
-alias cat='bat --wrap never'
 alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
 alias ll='ls -l'
 alias la='ls -la'
@@ -51,6 +77,11 @@ alias gitap='git add -p'
 alias gitc='git commit -m'
 alias gitp='git push father && git push github'
 
+if [ "$DISTRIBUTION" = "debian" ]; then
+	alias cat='batcat --wrap never'
+else
+	alias cat='bat --wrap never'
+fi
 
 # Copy and go to the directory
 cpg() {
@@ -84,15 +115,21 @@ function cd() {
 
 
 # Initialize fzf
-eval "$(fzf --zsh)"
+if [ "$DISTRIBUTION" = "manjaro" ]; then
+	source <(fzf --zsh)
+else
+	source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 
 # Initialize Zoxide
 eval "$(zoxide init zsh)"
-function z() {
-    __zoxide_z "$@"
-    ll
-}
+if [ "$DISTRIBUTION" = "manjaro" ]; then
+	function z() {
+	    __zoxide_z "$@"
+	    ll
+	}
+fi
 
 
 # Prompts (adapted from https://dotshare.it/dots/590)
@@ -106,7 +143,16 @@ display_logo() {
 	if [[ $EUID == 0 ]]; then
 		echo "%{$fg[red]%}\ueb46 %{$reset_color%}"
 	else
-		echo "%{$fg[green]%} %{$reset_color%}"
+		case "$DISTRIBUTION" in
+			"manjaro")
+				echo "%{$fg[green]%} %{$reset_color%}"
+				;;
+			"debian")
+				echo "%{$fg[green]%}\uf306 %{$reset_color%}"
+				;;
+			*)
+				echo "%{$fg[green]%}\uf31a %{$reset_color%}"
+		esac
 	fi
 }
 git_prompt_info() {
@@ -127,6 +173,13 @@ PROMPT="
 
 
 # Autorun
-/usr/bin/cat ~/Images/manjaro-banner.logo
-echo
-fortune -a
+case "$DISTRIBUTION" in
+	"manjaro")
+		/usr/bin/cat ~/Images/manjaro-banner.logo
+		echo
+		fortune -a
+		;;
+	"debian")
+		/home/phil/bin/neofetch
+		;;
+esac
