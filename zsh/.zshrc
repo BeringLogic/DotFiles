@@ -174,3 +174,4 @@ case "$DISTRIBUTION" in
 		/home/phil/bin/neofetch
 		;;
 esac
+ll
