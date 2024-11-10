@@ -35,10 +35,11 @@ setopt hist_find_no_dups
 
 # Autocomplete (compinstall)
 zstyle :compinstall filename '$HOME/.zshrc'
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 if [ $EUID -gt 0 ]; then
 	autoload -Uz compinit
+	compinit
 fi
 
 
