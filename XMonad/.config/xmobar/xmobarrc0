@@ -6,6 +6,7 @@ Config {
    , fgColor =      "white"
    , alpha = 0
    , position =     Top
+   , textOffset =   3
    
    -- layout
    , iconRoot = "/home/phil/.config/xmobar/icons"
@@ -39,7 +40,7 @@ Config {
 
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
-          Run Date           "<fc=#888888>\xf133</fc> %F (%a) %T" "date" 10
+          Run Date           "%F (%a) %T" "date" 10
 
         , Run StdinReader
 

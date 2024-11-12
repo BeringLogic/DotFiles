@@ -216,7 +216,7 @@ main = do
                                           , ppHidden  = xmobarColor "orange" ""               -- Hidden workspaces in xmobar
                                           , ppHiddenNoWindows = xmobarColor "lightgreen" ""   -- Hidden workspaces (no windows)
                                           , ppLayout = wrap " <fc=#888888>\xf928</fc> <fc=white>" "</fc>"
-                                          , ppTitle = wrap " <fc=#888888>\xf2d0</fc> <fc=lightgreen>" "</fc>"            -- Title of active window in xmobar
+                                          , ppTitle = wrap " <fc=#888888>\xeb7f</fc> <fc=lightgreen>" "</fc>"            -- Title of active window in xmobar
                                           , ppOrder  = \(ws:l:t:ex) -> [ws,l,t]
                                           }
                         >> updatePointer (0.5, 0.5) (0, 0)
