@@ -1,12 +1,12 @@
 ### Margins for notification-center/notifications
 margin-top: 25
-margin-right: 2000
+margin-right: 2300
 
 ### Margins for notification-center
-margin-bottom: 0
+margin-bottom: 5
 
 ### Width of the notification center/notifications in pixels.
-width: 1000
+width: 500
 
 ### Command to run at startup. This can be used to setup
 ### button states.
@@ -232,7 +232,7 @@ notification:
     ### be used to avoid overlap between notifications and a bar such as
     ### polybar or i3blocks.
     margin-top: 25
-    margin-right: 2000
+    margin-right: 2300
     margin-between: 20
 
     ### Defines after how many lines of text the body will be truncated. 
