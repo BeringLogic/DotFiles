@@ -41,7 +41,7 @@ myStartupHook = do
                   spawnOnce "pamac-tray &"
                   spawnOnce "redshift-gtk &"
                   spawnOnce "udiskie -a -s &"
-                  spawnOnce "ckb-next --background"
+                  spawnOnce "ckb-next -b"
                   spawnOnce "picom -b"
 
 myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
