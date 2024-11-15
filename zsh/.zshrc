@@ -91,8 +91,10 @@ alias mzs='sudo fzf | xargs sudo micro'
 
 if [ "$DISTRIBUTION" = "debian" ]; then
 	alias cat='batcat --wrap never'
+	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 else
 	alias cat='bat --wrap never'
+	alias man='batman'
 fi
 
 
