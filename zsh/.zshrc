@@ -155,7 +155,12 @@ display_logo() {
 }
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
+  echo -n "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
+  
+  changes=$(git status | grep -c "modifié :")
+  if [[ $changes -gt 0 ]]; then
+  	echo -n "─[%{$fg[red]%}!${changes}%{$reset_color%}]"
+  fi
 }
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
