@@ -91,7 +91,7 @@ alias mzs='sudo fzf | xargs sudo micro'
 
 if [ "$DISTRIBUTION" = "debian" ]; then
 	alias cat='batcat --wrap never'
-	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 else
 	alias cat='bat --wrap never'
 	alias man='batman'
@@ -107,8 +107,7 @@ mkdirg() {
 
 # ll after cd or z
 function cd() {
-	builtin cd "$@"
-	ll
+	builtin cd "$@" && ll
 }
 
 
