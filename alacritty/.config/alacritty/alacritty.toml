@@ -2,19 +2,15 @@
 TERM = "xterm-256color"
 
 [font.bold]
-family = "SauceCodeProNerdFontMono"
 style = "Bold"
 
 [font.bold_italic]
-family = "SauceCodeProNerdFontMono"
 style = "Bold Italic"
 
 [font.italic]
-family = "SauceCodeProNerdFontMono"
 style = "Italic"
 
 [font.normal]
-family = "SauceCodeProNerdFontMono"
 style = "Regular"
 
 [[keyboard.bindings]]

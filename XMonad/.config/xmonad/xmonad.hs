@@ -48,7 +48,14 @@ myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10"
 
 myProjects :: [Project]
 myProjects = 
-        [ Project { projectName      = "\xf269"
+        [ Project { projectName      = "\xf015"
+                  , projectDirectory = "~/"
+                  , projectStartHook = Just $ do spawn "alacritty -e ssh linode.ringlogic.com"
+                                                 spawn "alacritty -e ssh father"
+                                                 spawn myTerminal
+                                                 sendMessage $ JumpToLayout "Left"
+                  }
+        , Project { projectName      = "\xf269"
                   , projectDirectory = "~/"
                   , projectStartHook = Just $ do spawn "firefox"
                   }
