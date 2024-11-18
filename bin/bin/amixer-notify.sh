@@ -47,6 +47,9 @@ TEMP_FILE="/tmp/${SCRIPT_NAME}_NOTIFICATION_ID"
 
 if [[ -f "$TEMP_FILE" ]]; then
     VOLUME_NOTIFICATION_ID=$(cat "$TEMP_FILE")
+    if [[ -z "$VOLUME_NOTIFICATION_ID" ]]; then
+        VOLUME_NOTIFICATION_ID=0
+    fi
 else
     VOLUME_NOTIFICATION_ID=0
 fi
