@@ -70,6 +70,12 @@ bindkey "\e[1;5D" backward-word
 bindkey "\e[1;5C" forward-word
 
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+
 # Aliases
 alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
 alias ll='ls -l'
@@ -170,12 +176,6 @@ PROMPT="
 %B $(display_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
 %B    │ %j background jobs.)%b
 %B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
-
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
 
 
 # Autorun
