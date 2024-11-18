@@ -66,6 +66,7 @@ myProjects =
                   , projectStartHook = Just $ do spawn "spotify-launcher"
                                                  spawn "pavucontrol"
                                                  spawn "blueman-manager"
+                                                 sendMessage $ JumpToLayout "Left"
                   }
         ]
 
