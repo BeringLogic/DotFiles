@@ -64,6 +64,8 @@ myProjects =
         , Project { projectName      = "\xf1bc"
                   , projectDirectory = "~/"
                   , projectStartHook = Just $ do spawn "spotify-launcher"
+                                                 spawn "pavucontrol"
+                                                 spawn "blueman-manager"
                   }
         ]
 
