@@ -156,24 +156,83 @@ display_logo() {
 		esac
 	fi
 }
-git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo -n "─[ %{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
-  
-  changes=$(git status | grep -c "modifié :")
-  if [[ $changes -gt 0 ]]; then
-  	echo -n "─[%{$fg[red]%}!${changes}%{$reset_color%}]"
-  fi
+display_git_info() {
+    _GIT_STATUS=$(gitstatus.py 2>/dev/null)
+    __CURRENT_GIT_STATUS=("${(@s: :)_GIT_STATUS}")
+    GIT_BRANCH=$__CURRENT_GIT_STATUS[1]
+    GIT_AHEAD=$__CURRENT_GIT_STATUS[2]
+    GIT_BEHIND=$__CURRENT_GIT_STATUS[3]
+    GIT_STAGED=$__CURRENT_GIT_STATUS[4]
+    GIT_CONFLICTS=$__CURRENT_GIT_STATUS[5]
+    GIT_CHANGED=$__CURRENT_GIT_STATUS[6]
+    GIT_UNTRACKED=$__CURRENT_GIT_STATUS[7]
+    GIT_STASHED=$__CURRENT_GIT_STATUS[8]
+    GIT_CLEAN=$__CURRENT_GIT_STATUS[9]
+    GIT_DELETED=$__CURRENT_GIT_STATUS[10]
+    GIT_UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name "@{upstream}" 2>/dev/null) && GIT_UPSTREAM="${ZSH_THEME_GIT_PROMPT_UPSTREAM_SEPARATOR}${GIT_UPSTREAM}"
+
+    if [ -n "$__CURRENT_GIT_STATUS" ]; then
+		STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_BRANCH$GIT_BRANCH$GIT_UPSTREAM%{${reset_color}%}"
+		if [ "$GIT_BEHIND" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND%{${reset_color}%}"
+		fi
+		if [ "$GIT_AHEAD" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD%{${reset_color}%}"
+		fi
+		STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+		if [ "$GIT_STAGED" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED%{${reset_color}%}"
+		fi
+		if [ "$GIT_CONFLICTS" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS$GIT_CONFLICTS%{${reset_color}%}"
+		fi
+		if [ "$GIT_CHANGED" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED$GIT_CHANGED%{${reset_color}%}"
+		fi
+		if [ "$GIT_DELETED" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_DELETED$GIT_DELETED%{${reset_color}%}"
+		fi
+		if [ "$GIT_UNTRACKED" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED$GIT_UNTRACKED%{${reset_color}%}"
+		fi
+		if [ "$GIT_STASHED" -ne "0" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STASHED$GIT_STASHED%{${reset_color}%}"
+		fi
+		if [ "$GIT_CLEAN" -eq "1" ]; then
+			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
+		fi
+		STATUS="$STATUS%{${reset_color}%}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+	else
+		STATUS=""
+	fi
+
+    echo "$STATUS"
 }
+
+# Default values for the appearance of the prompt.
+ZSH_THEME_GIT_PROMPT_PREFIX="─["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[yellow]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[red]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}%{-%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}%{…%G%}"
+ZSH_THEME_GIT_PROMPT_STASHED="%{$fg_bold[blue]%}%{⚑%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
+ZSH_THEME_GIT_PROMPT_UPSTREAM_SEPARATOR="->"
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 local user_host='%{$fg[green]%}%n@%m%{$reset_color%}'
 local current_dir='%{$fg[blue]%}%~%{$reset_color%}'
-local git_branch='$(git_prompt_info)%{$reset_color%}'
+local git_info='$(display_git_info)%{$reset_color%}'
 
 RPROMPT=""
 PROMPT="
-%B $(display_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_branch}%(1j.
+%B $(display_logo)─┬─[${user_host}%B]─[${current_dir}%B]${git_info}%(1j.
 %B    │ %j background jobs.)%b
 %B    ╰─>%(?..%{$fg[red]%})%(?.. [%?])%{$reset_color%}%b "
 
