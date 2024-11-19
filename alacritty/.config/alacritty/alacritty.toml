@@ -30,3 +30,7 @@ lines = 40
 [window.position]
 x = 100
 y = 100
+
+[colors.primary]
+background="#000000"
+
