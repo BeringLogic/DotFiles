@@ -1,8 +1,8 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME=Material-Black-Blueberry-BE
 
-export TERMINAL=/usr/bin/kitty
-export EDITOR=/usr/bin/micro
+export TERMINAL=/usr/bin/alacritty
+export EDITOR=/usr/bin/nvim
 export PAGER=/usr/bin/less
 
 export NNN_OPTS="r"

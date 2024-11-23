@@ -93,6 +93,7 @@ alias gitap='git add -p'
 alias gitc='git commit -m'
 alias gitp='git push father && git push github'
 alias catp='cat -p --no-pager'
+alias v='nvim'
 
 if [ "$DISTRIBUTION" = "debian" ]; then
 	alias cat='batcat --wrap never'
