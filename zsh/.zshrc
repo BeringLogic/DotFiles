@@ -91,7 +91,7 @@ alias gitd='git diff'
 alias gita='git add'
 alias gitap='git add -p'
 alias gitc='git commit -m'
-alias gitp='git push father && git push github'
+alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
 alias v='nvim'
 
