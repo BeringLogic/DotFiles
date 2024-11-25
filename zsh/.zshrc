@@ -94,6 +94,7 @@ alias gitc='git commit -m'
 alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
 alias v='nvim'
+alias lg='lazygit'
 
 if [ "$DISTRIBUTION" = "debian" ]; then
 	alias cat='batcat --wrap never'
