@@ -14,11 +14,11 @@ return {
           },
         },
       })
-      local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find File" })
-      vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Find Recent File" })
-      vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Find word using grep" })
-      vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find TODOs" })
+
+      vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files theme=dropdown previewer=false<CR>", { desc = "Find File" })
+      vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles theme=dropdown previewer=false<CR>", { desc = "Find Recent File" })
+      vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep theme=dropdown<CR>", { desc = "Find word using grep" })
+      vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find TODOs" })
 
       require("telescope").load_extension("ui-select")
     end,
