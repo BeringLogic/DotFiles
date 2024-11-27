@@ -17,7 +17,7 @@ return {
 
       vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files theme=dropdown previewer=false<CR>", { desc = "Find File" })
       vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles theme=dropdown previewer=false<CR>", { desc = "Find Recent File" })
-      vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep theme=dropdown<CR>", { desc = "Find word using grep" })
+      vim.keymap.set("n", "<leader>/", "<cmd>Telescope live_grep theme=dropdown<CR>", { desc = "Find word using grep" })
       vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find TODOs" })
       vim.keymap.set("n", "<leader>fr", "<cmd>Telescope registers theme=dropdown<CR>", { desc = "Find Registers" })
 
