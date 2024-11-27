@@ -1,6 +1,8 @@
 
 vim.g.mapleader = " "
 
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.signcolumn = "yes"
@@ -21,5 +23,4 @@ vim.opt.smartcase = true
 --vim.opt.backspace = "indent, eol, start" -- allow backspace on indent, end of line or insert mode start position
 
 vim.opt.swapfile = false
-
 
