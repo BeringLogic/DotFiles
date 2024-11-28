@@ -8,8 +8,6 @@ return {
     { "<Leader>sr", "<cmd>SessionRestore<CR>", desc="Auto-session Restore" },
   },
 
-  opts = {
-    log_level="debug"
-  }
+  opts = {}
 }
 
