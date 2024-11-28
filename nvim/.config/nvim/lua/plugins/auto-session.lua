@@ -8,6 +8,8 @@ return {
     { "<Leader>sr", "<cmd>SessionRestore<CR>", desc="Auto-session Restore" },
   },
 
-  opts = {}
+  opts = {
+    bypass_save_filetypes = { "alpha" },
+  }
 }
 
