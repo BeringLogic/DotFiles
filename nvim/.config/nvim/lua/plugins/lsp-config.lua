@@ -17,10 +17,11 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<S-F12>", vim.lsp.buf.references, {})
-      vim.keymap.set("n", "C-.", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc="Hover" })
+      vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc="Definitions" })
+      vim.keymap.set("n", "<S-F12>", vim.lsp.buf.references, { desc="References" })
+      vim.keymap.set("n", "C-.", vim.lsp.buf.code_action, { desc="Code Actions" })
+      vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc="Rename" })
     end,
   },
 }
