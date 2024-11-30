@@ -20,6 +20,7 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
+      lspconfig.pylsp.setup({})
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc="Hover" })
       vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc="Definitions" })
