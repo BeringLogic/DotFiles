@@ -2,7 +2,7 @@ return {
   "mfussenegger/nvim-dap",
   dependencies = {
     "nvim-neotest/nvim-nio",
-    "rcarriga/nvim-dap-ui"
+    "rcarriga/nvim-dap-ui",
   },
   config = function()
     local dap = require("dap")
@@ -20,7 +20,6 @@ return {
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
-    vim.keymap.set('n', '<Leader>dc', dap.continue, { desc="Debugger Continue" })
-  end
+    vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Debugger Continue" })
+  end,
 }
-
