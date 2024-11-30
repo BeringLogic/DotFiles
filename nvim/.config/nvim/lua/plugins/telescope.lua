@@ -21,6 +21,7 @@ return {
       vim.keymap.set("n", "<leader>fr", "<cmd>Telescope registers theme=dropdown<CR>", { desc = "Find Registers" })
       vim.keymap.set("n", "<leader>f:", "<cmd>Telescope commands theme=dropdown<CR>", { desc = "Find Commands" })
       vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<CR>", { desc = "Find Marks" })
+      vim.keymap.set("n", "<leader>fs", "<cmd>Telescope spell_suggest theme=dropdown<CR>", { desc = "Find Spelling Suggestions" })
 
       vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<CR>", { desc = "Find QuickFix" })
       vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next QuickFix" })

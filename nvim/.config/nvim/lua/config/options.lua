@@ -25,3 +25,8 @@ vim.opt.backspace = { "indent", "eol", "start" }
 vim.opt.swapfile = false
 
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- Spelling Suggestions: ]s and [s to jump to next spelling mistake. z= or <leader>-fs to pick a suggestion.
+vim.o.spell = true
+vim.o.spelllang = "en_ca,fr"
+
