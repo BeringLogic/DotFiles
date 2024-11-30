@@ -19,6 +19,7 @@ return {
       vim.keymap.set("n", "<leader>f/", "<cmd>Telescope live_grep theme=dropdown<CR>", { desc = "Find word using grep" })
       vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find TODOs" })
       vim.keymap.set("n", "<leader>fr", "<cmd>Telescope registers theme=dropdown<CR>", { desc = "Find Registers" })
+      vim.keymap.set("n", "<leader>f:", "<cmd>Telescope commands theme=dropdown<CR>", { desc = "Find Commands" })
 
       require("telescope").load_extension("ui-select")
     end,
