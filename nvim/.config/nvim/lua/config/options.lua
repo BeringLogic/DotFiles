@@ -20,7 +20,7 @@ vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
---vim.opt.backspace = "indent, eol, start" -- allow backspace on indent, end of line or insert mode start position
+vim.opt.backspace = { "indent", "eol", "start" }
 
 vim.opt.swapfile = false
 
