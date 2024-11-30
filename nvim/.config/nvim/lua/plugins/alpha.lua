@@ -49,7 +49,6 @@ return {
       dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
       dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
       dashboard.button("C-p", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
-      dashboard.button("SPC fr", "󰱼  > Find Recent File", "<cmd>Telescope oldfiles<CR>"),
       dashboard.button("SPC f/", "  > Find using grep", "<cmd>Telescope live_grep<CR>"),
       dashboard.button("SPC ft", "󰱼  > Find TODOs", "<cmd>TodoTelescope<CR>"),
       dashboard.button("SPC lg", " > Lazy Git", "<cmd>LazyGit<CR>"),
