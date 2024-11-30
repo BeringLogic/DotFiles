@@ -21,6 +21,10 @@ return {
       vim.keymap.set("n", "<leader>fr", "<cmd>Telescope registers theme=dropdown<CR>", { desc = "Find Registers" })
       vim.keymap.set("n", "<leader>f:", "<cmd>Telescope commands theme=dropdown<CR>", { desc = "Find Commands" })
 
+      vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<CR>", { desc = "Find QuickFix" })
+      vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next QuickFix" })
+      vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Previous QuickFix" })
+
       require("telescope").load_extension("ui-select")
     end,
   },
