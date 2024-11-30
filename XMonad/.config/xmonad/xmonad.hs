@@ -144,7 +144,6 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    , ("M-<Return>",                 spawn myTerminal)
                    -- misc
                    , ("M-w",                        kill)
-                   , ("M-k",                        spawn "dm-tool lock")
                    , ("<XF86ModeLock>",             spawn "dm-tool lock")
                    , ("<XF86AudioMute>",            spawn "/home/phil/bin/amixer-notify.sh toggle")
                    , ("<XF86AudioLowerVolume>",     spawn "/home/phil/bin/amixer-notify.sh dec")
