@@ -27,6 +27,8 @@ return {
       vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next QuickFix" })
       vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Previous QuickFix" })
 
+      vim.keymap.set("n", "<leader><leader>", "<cmd>e #<CR>", { desc = "Previous File" })
+
       require("telescope").load_extension("ui-select")
     end,
   },
