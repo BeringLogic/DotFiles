@@ -152,7 +152,7 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    , ("<XF86AudioStop>",            spawn "playerctl stop")
                    , ("<XF86AudioPrev>",            spawn "playerctl previous")
                    , ("<XF86AudioNext>",            spawn "playerctl next")
-                   , ("<Print>",                    spawn "spectacle")
+                   , ("<Print>",                    spawn "screengrab")
                    ]
                    -- workspaces (f1 - f12)
                    ++
@@ -169,7 +169,7 @@ myManageHook = composeAll
                    , title     =? "Steam Login"           --> doCenterFloat
                    , title     =? "Steam Guard - Computer Authorization Required" --> doCenterFloat
                    , className =? "io.elementary.desktop.agent-polkit" --> doCenterFloat
-                   , className =? "spectacle"             --> doCenterFloat
+                   , className =? "screengrab"            --> doCenterFloat
                    , title     =? "Open File"             --> doCenterFloat
                    , title     =? "Save As"               --> doCenterFloat
                    , (className =? "Electron" <&&> title =? "Code - OSS") --> doCenterFloat
