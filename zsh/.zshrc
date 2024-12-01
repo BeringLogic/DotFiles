@@ -9,8 +9,11 @@ distribution () {
 		        dtype="debian"
 		        ;;
 		    manjaro)
-				dtype="manjaro"
-				;;
+				    dtype="manjaro"
+    				;;
+		    arch)
+    				dtype="arch"
+    				;;
 		esac
 	fi
 
@@ -45,7 +48,7 @@ fi
 
 # zsh plugins
 case "$DISTRIBUTION" in
-	"manjaro")
+	"manjaro" | "arch")
 		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 		source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 		;;
@@ -95,15 +98,18 @@ alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
 alias lg='lazygit'
 
-if [ "$DISTRIBUTION" = "debian" ]; then
-	alias cat='batcat --wrap never'
-	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-  alias v='nvim'
-else
-	alias cat='bat --wrap never'
-	alias man='batman'
-  alias v='neovide'
-fi
+case "$DISTRIBUTION" in
+  "debian")
+  	alias cat='batcat --wrap never'
+  	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+    alias v='nvim'
+    ;;
+  "manjaro" | "arch")
+  	alias cat='bat --wrap never'
+  	alias man='batman'
+    alias v='neovide'
+    ;;
+esac
 
 
 # Create and go into the directory
@@ -120,16 +126,19 @@ function cd() {
 
 
 # Initialize fzf
-if [ "$DISTRIBUTION" = "manjaro" ]; then
-	source <(fzf --zsh)
-else
-	source /usr/share/doc/fzf/examples/key-bindings.zsh
-fi
+case "$DISTRIBUTION" in
+  "debian")
+  	source /usr/share/doc/fzf/examples/key-bindings.zsh
+    ;;
+  "manjaro" | "arch")
+    source <(fzf --zsh)
+    ;;
+esac
 
 
 # Initialize Zoxide
 eval "$(zoxide init zsh)"
-if [ "$DISTRIBUTION" = "manjaro" ]; then
+if [ "$DISTRIBUTION" != "debian" ]; then
 	function z() {
 	    __zoxide_z "$@"
 	    ll
@@ -149,11 +158,14 @@ display_logo() {
 		echo "%{$fg[red]%}\ueb46 %{$reset_color%}"
 	else
 		case "$DISTRIBUTION" in
+			"debian")
+				echo "%{$fg[green]%}\uf306 %{$reset_color%}"
+				;;
 			"manjaro")
 				echo "%{$fg[green]%} %{$reset_color%}"
 				;;
-			"debian")
-				echo "%{$fg[green]%}\uf306 %{$reset_color%}"
+			"arch")
+				echo "%{$fg[green]%} %{$reset_color%}"
 				;;
 			*)
 				echo "%{$fg[green]%}\uf31a %{$reset_color%}"
@@ -243,13 +255,13 @@ PROMPT="
 
 # Autorun
 case "$DISTRIBUTION" in
-	"manjaro")
+	"debian")
+		/home/phil/bin/neofetch
+		;;
+	"manjaro" | "arch")
 		/usr/bin/cat ~/Images/manjaro-banner.logo
 		echo
 		fortune -a
-		;;
-	"debian")
-		/home/phil/bin/neofetch
 		;;
 esac
 ll
