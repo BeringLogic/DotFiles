@@ -31,7 +31,7 @@ myTerminal = "alacritty"
 
 myStartupHook = do
                   spawnOnce "deadd-notification-center &"
-                  spawnOnce "/usr/lib/policykit-1-pantheon/io.elementary.desktop.agent-polkit &"
+                  spawnOnce "/usr/bin/lxpolkit &"
                   spawnOnce "feh --no-fehbg --bg-center /home/phil/Images/milky.way.jpg"
                   spawnOnce "xsetroot -cursor_name left_ptr"
                   spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 0 --tint 0x000000 --height 22 --iconspacing 3 &"
