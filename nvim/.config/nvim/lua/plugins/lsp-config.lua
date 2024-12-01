@@ -27,6 +27,9 @@ return {
       lspconfig.pylsp.setup({
         capabilities = capabilities
       })
+      lspconfig.bashls.setup({
+        capabilities = capabilities
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc="Hover" })
       vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc="Definitions" })
