@@ -93,15 +93,16 @@ alias gitap='git add -p'
 alias gitc='git commit -m'
 alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
-alias v='nvim'
 alias lg='lazygit'
 
 if [ "$DISTRIBUTION" = "debian" ]; then
 	alias cat='batcat --wrap never'
 	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+  alias v='nvim'
 else
 	alias cat='bat --wrap never'
 	alias man='batman'
+  alias v='neovide'
 fi
 
 
