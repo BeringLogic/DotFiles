@@ -1,7 +1,7 @@
 Config { 
 
    -- appearance
-     font =         "xft:NotoSansMonoNerdFont:Bold:size=11:antialias=true:hinting=true"
+     font =         "FiraCodeNerdFont Bold 10"
    , bgColor =      "black"
    , fgColor =      "white"
    , alpha = 0
@@ -45,7 +45,7 @@ Config {
         , Run StdinReader
 
         -- cpu activity monitor
-        , Run MultiCpu       [ "--template" , "<fc=#888888>\xf85a</fc> <total>%"
+        , Run MultiCpu       [ "--template" , "<fc=#888888>\xf4bc</fc> <total>%"
                              , "--Low"      , "50"         -- units: %
                              , "--High"     , "80"         -- units: %
                              , "--low"      , "#00AA00"
@@ -71,7 +71,7 @@ Config {
                              ] 50
                           
         -- memory usage monitor
-        , Run Memory         [ "--template" ,"<fc=#888888>\xf2db</fc> <free>M"
+        , Run Memory         [ "--template" ,"<fc=#888888>\xefc5</fc> <free>M"
                              , "--Low"      , "4096"
                              , "--High"     , "24576"
                              , "--low"      , "red"
@@ -79,14 +79,14 @@ Config {
                              , "--high"     , "#00AA00"
                              ] 10
 
-        , Run DiskU          [ ("/", "<fc=#888888>\xf7c9</fc> / <fc=darkorange><free></fc>"), ("/home/phil/Data", "<fc=#888888>\xf7c9</fc> Data <fc=darkorange><free></fc>") ]
+        , Run DiskU          [ ("/", "<fc=#888888>\xf02ca</fc> / <fc=darkorange><free></fc>"), ("/home/phil/Data", "<fc=#888888>\xf02ca</fc> Data <fc=darkorange><free></fc>") ]
                              [] 30
 
-        , Run DiskIO         [ ("/", "<fc=#888888>\xf7c9</fc> <read>/<write>"), ("/home/phil/Data", "<fc=#888888>\xf7c9</fc> <read>/<write>") ]
+        , Run DiskIO         [ ("/", "<fc=#888888>\xf02ca</fc> <read>/<write>"), ("/home/phil/Data", "<fc=#888888>\xf02ca</fc> <read>/<write>") ]
                              [] 10
 
         -- network activity monitor (dynamic interface resolution)
-        , Run DynNetwork     [ "--template" , "<fc=#888888>\xfaa8</fc> <dev> <fc=#888888>\xf0ed</fc> <rx>kB/s <fc=#888888>\xf0ee</fc> <tx>kB/s"
+        , Run DynNetwork     [ "--template" , "<fc=#888888>\xf05a9</fc> <dev> <fc=#888888>\xf0ed</fc> <rx>kB/s <fc=#888888>\xf0ee</fc> <tx>kB/s"
                              , "--Low"      , "10000"       -- units: B/s
                              , "--High"     , "300000"      -- units: B/s
                              , "--low"      , "#00AA00"

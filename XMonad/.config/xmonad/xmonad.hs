@@ -222,7 +222,7 @@ main = do
                                           , ppVisible = xmobarColor "cyan" ""                 -- Visible but not current workspace
                                           , ppHidden  = xmobarColor "orange" ""               -- Hidden workspaces in xmobar
                                           , ppHiddenNoWindows = xmobarColor "lightgreen" ""   -- Hidden workspaces (no windows)
-                                          , ppLayout = wrap " <fc=#888888>\xf928</fc> <fc=white>" "</fc>"
+                                          , ppLayout = wrap " <fc=#888888>\xebeb</fc> <fc=white>" "</fc>"
                                           , ppTitle = wrap " <fc=#888888>\xeb7f</fc> <fc=lightgreen>" "</fc>"            -- Title of active window in xmobar
                                           , ppOrder  = \(ws:l:t:ex) -> [ws,l,t]
                                           }
