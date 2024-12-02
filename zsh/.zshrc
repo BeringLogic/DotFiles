@@ -98,6 +98,7 @@ alias gitc='git commit -m'
 alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
 alias lg='lazygit'
+alias sv='sudo nvim'
 
 case "$DISTRIBUTION" in
   "debian")
