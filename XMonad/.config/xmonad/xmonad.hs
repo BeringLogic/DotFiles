@@ -37,7 +37,7 @@ myStartupHook = do
                   spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 0 --tint 0x000000 --height 22 --iconspacing 3 &"
                   spawnOnce "nm-applet &"
                   spawnOnce "blueman-applet &"
-                  spawnOnce "pamac-tray &"
+                  spawnOnce "arch-update --tray"
                   spawnOnce "redshift-gtk &"
                   spawnOnce "udiskie -a -s &"
                   spawnOnce "ckb-next -b"
