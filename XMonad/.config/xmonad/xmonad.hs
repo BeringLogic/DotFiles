@@ -61,7 +61,7 @@ myProjects =
                   }
         , Project { projectName      = "\xf1b6"
                   , projectDirectory = "~/"
-                  , projectStartHook = Just $ do spawn "steam"
+                  , projectStartHook = Just $ do spawn "steam-runtime"
                   }
         , Project { projectName      = "\xf2a0"
                   , projectDirectory = "~/"
