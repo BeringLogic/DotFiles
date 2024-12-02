@@ -111,7 +111,7 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    , ("M-s x",                      io exitSuccess)
                    , ("M-s s",                      spawn "systemctl suspend")
                    , ("M-s b",                      spawn "reboot")
-                   , ("M-s h",                      spawn "halt")
+                   , ("M-s h",                      spawn "poweroff")
                    -- layout manipulation
                    , ("M-C-<Left>",                 sendMessage Shrink)
                    , ("M-C-<Right>",                sendMessage Expand)
