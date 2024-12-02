@@ -43,6 +43,7 @@ myStartupHook = do
                   spawnOnce "udiskie -a -s &"
                   spawnOnce "ckb-next -b"
                   spawnOnce "picom -b"
+                  spawnOnce "light-lock &"
 
 myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
 
@@ -144,7 +145,7 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    , ("M-<Return>",                 spawn myTerminal)
                    -- misc
                    , ("M-w",                        kill)
-                   , ("<XF86ModeLock>",             spawn "dm-tool lock")
+                   , ("<XF86ModeLock>",             spawn "light-locker-command -l")
                    , ("<XF86AudioPlay>",            spawn "playerctl play-pause")
                    , ("<XF86AudioStop>",            spawn "playerctl stop")
                    , ("<XF86AudioPrev>",            spawn "playerctl previous")
