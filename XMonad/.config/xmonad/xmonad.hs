@@ -36,6 +36,7 @@ myStartupHook = do
                   spawnOnce "xsetroot -cursor_name left_ptr"
                   spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 0 --tint 0x000000 --height 22 --iconspacing 3 &"
                   spawnOnce "nm-applet &"
+                  spawnOnce "volumeicon &"
                   spawnOnce "blueman-applet &"
                   spawnOnce "arch-update --tray"
                   spawnOnce "redshift-gtk &"
@@ -144,9 +145,6 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    -- misc
                    , ("M-w",                        kill)
                    , ("<XF86ModeLock>",             spawn "dm-tool lock")
-                   , ("<XF86AudioMute>",            spawn "/home/phil/bin/amixer-notify.sh toggle")
-                   , ("<XF86AudioLowerVolume>",     spawn "/home/phil/bin/amixer-notify.sh dec")
-                   , ("<XF86AudioRaiseVolume>",     spawn "/home/phil/bin/amixer-notify.sh inc")
                    , ("<XF86AudioPlay>",            spawn "playerctl play-pause")
                    , ("<XF86AudioStop>",            spawn "playerctl stop")
                    , ("<XF86AudioPrev>",            spawn "playerctl previous")
