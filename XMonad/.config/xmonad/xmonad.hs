@@ -36,7 +36,6 @@ myStartupHook = do
                   spawnOnce "xsetroot -cursor_name left_ptr"
                   spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 0 --tint 0x000000 --height 22 --iconspacing 3 &"
                   spawnOnce "nm-applet &"
-                  spawnOnce "pasystray &"
                   spawnOnce "blueman-applet &"
                   spawnOnce "pamac-tray &"
                   spawnOnce "redshift-gtk &"
@@ -71,7 +70,7 @@ myProjects =
         , Project { projectName      = "\xf1bc"
                   , projectDirectory = "~/"
                   , projectStartHook = Just $ do spawn "spotify-launcher"
-                                                 spawn "pavucontrol"
+                                                 spawn "pwvucontrol"
                                                  spawn "blueman-manager"
                                                  sendMessage $ JumpToLayout "Left"
                   }
