@@ -49,7 +49,7 @@ myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10"
 
 myProjects :: [Project]
 myProjects = 
-        [ Project { projectName      = "\xf015"
+        [ Project { projectName      = "4"
                   , projectDirectory = "~/"
                   , projectStartHook = Just $ do spawn "alacritty -e ssh linode.ringlogic.com"
                                                  spawn "alacritty -e ssh father"
