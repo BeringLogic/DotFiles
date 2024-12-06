@@ -98,18 +98,17 @@ alias gitc='git commit -m'
 alias gitP='git push father && git push github'
 alias catp='cat -p --no-pager'
 alias lg='lazygit'
+alias v='nvim'
 alias sv='sudo nvim'
 
 case "$DISTRIBUTION" in
   "debian")
   	alias cat='batcat --wrap never'
   	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-    alias v='nvim'
     ;;
   "manjaro" | "arch")
   	alias cat='bat --wrap never'
   	alias man='batman'
-    alias v='neovide'
     ;;
 esac
 
