@@ -109,6 +109,8 @@ case "$DISTRIBUTION" in
   "manjaro" | "arch")
   	alias cat='bat --wrap never'
   	alias man='batman'
+    alias cp='advcp -g'
+    alias mv='advmv -g'
     ;;
 esac
 
