@@ -43,7 +43,7 @@ myStartupHook = do
                   spawnOnce "udiskie -a -s &"
                   spawnOnce "ckb-next -b"
                   spawnOnce "picom -b"
-                  spawnOnce "light-lock &"
+                  spawnOnce "light-locker --lock-after-screensaver=300 --lock-on-suspend &"
 
 myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
 
