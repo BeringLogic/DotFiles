@@ -261,10 +261,13 @@ case "$DISTRIBUTION" in
 	"debian")
 		/home/phil/bin/neofetch
 		;;
-	"manjaro" | "arch")
+	"manjaro")
 		/usr/bin/cat ~/Images/manjaro-banner.logo
 		echo
 		fortune -a
+		;;
+	"arch")
+		/usr/bin/cat ~/Images/arch-banner.logo
 		;;
 esac
 ll
