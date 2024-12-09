@@ -25,7 +25,7 @@ return {
           { key="SPC f:", icon="", desc="Find Commands", action="<cmd>Telescope commands<CR>" },
           { key="SPC ft", icon="󰱼", desc="Find TODOs", action="<cmd>TodoTelescope<CR>" },
           { key="SPC lg", icon="", desc="Lazy Git", action="<cmd>LazyGit<CR>" },
-          { key="q", icon="", desc="Quit", action="<cmd>qa<CR>" },
+          { key="q", icon="󰩈", desc="Quit", action="<cmd>qa<CR>" },
         }
       },
 			sections = {
