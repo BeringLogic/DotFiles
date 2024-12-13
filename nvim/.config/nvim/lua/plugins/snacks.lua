@@ -8,6 +8,17 @@ return {
 		quickfile = { enabled = true },
 		rename = { enabled = true },
 		statuscolumn = { enabled = true },
+		animate = { enabled = true },
+		dim = { enabled = true },
+		input = {
+			enabled = true,
+			icon = " ",
+			icon_hl = "SnacksInputIcon",
+			win = { style = "input" },
+			expand = true,
+		},
+		scroll = { enabled = true },
+		win = { enabled = true },
 		styles = {
 			notification = {
 				wo = { wrap = true }, -- Wrap notifications
