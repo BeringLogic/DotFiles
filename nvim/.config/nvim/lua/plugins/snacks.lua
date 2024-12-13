@@ -15,19 +15,19 @@ return {
 		},
 		dashboard = {
 			enabled = true,
-      preset = {
-        keys = {
-          { key="e", icon="", desc="New File", action="<cmd>enew<CR>" },
-          { key="SPC ee", icon="", desc="Toggle file explorer", action="<cmd>NvimTreeToggle<CR>" },
-          { key="C-p", icon="󰱼", desc="Find File", action="<cmd>Telescope find_files<CR>" },
-          { key="SPC f/", icon="", desc="Find using grep", action="<cmd>Telescope live_grep<CR>" },
-          { key="SPC fm", icon="", desc="Find Marks", action="<cmd>Telescope marks<CR>" },
-          { key="SPC f:", icon="", desc="Find Commands", action="<cmd>Telescope commands<CR>" },
-          { key="SPC ft", icon="󰱼", desc="Find TODOs", action="<cmd>TodoTelescope<CR>" },
-          { key="SPC lg", icon="", desc="Lazy Git", action="<cmd>LazyGit<CR>" },
-          { key="q", icon="󰩈", desc="Quit", action="<cmd>qa<CR>" },
-        }
-      },
+			preset = {
+				keys = {
+					{ key = "e", icon = "", desc = "New File", action = "<cmd>enew<CR>" },
+					{ key = "SPC ee", icon = "", desc = "Toggle file explorer", action = "<cmd>NvimTreeToggle<CR>" },
+					{ key = "C-p", icon = "󰱼", desc = "Find File", action = "<cmd>Telescope find_files<CR>" },
+					{ key = "SPC f/", icon = "", desc = "Find using grep", action = "<cmd>Telescope live_grep<CR>" },
+					{ key = "SPC fm", icon = "", desc = "Find Marks", action = "<cmd>Telescope marks<CR>" },
+					{ key = "SPC f:", icon = "", desc = "Find Commands", action = "<cmd>Telescope commands<CR>" },
+					{ key = "SPC ft", icon = "󰱼", desc = "Find TODOs", action = "<cmd>TodoTelescope<CR>" },
+					{ key = "SPC lg", icon = "", desc = "Lazy Git", action = "<cmd>LazyGit<CR>" },
+					{ key = "q", icon = "󰩈", desc = "Quit", action = "<cmd>qa<CR>" },
+				},
+			},
 			sections = {
 				{
 					section = "terminal",
