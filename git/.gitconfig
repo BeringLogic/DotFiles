@@ -2,6 +2,6 @@
 	name = Philippe Gouin
 	email = bering@ringlogic.com
 [core]
-	editor = micro
+	editor = nvim
 [init]
 	defaultBranch = main
