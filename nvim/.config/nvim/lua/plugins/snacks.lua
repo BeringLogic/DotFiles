@@ -42,7 +42,7 @@ return {
 			sections = {
 				{
 					section = "terminal",
-					cmd = "chafa --symbols=vhalf ~/Data/Pictures/Kyrsha\\ devant\\ l\\'ordi.jpg; sleep .1",
+					cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt",
 					height = 17,
 					padding = 1,
 				},
