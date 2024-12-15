@@ -107,7 +107,7 @@ myKeysToRemove =   [ "M-S-<Return>"  -- terminal
                    , "M-w", "M-e", "M-r"
                    ]
 
-myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
+myAdditionalKeys = [ ("M-s l",                      spawn  "light-locker-command -l")
                    , ("M-s r",                      restart "xmonad" True)
                    , ("M-s x",                      io exitSuccess)
                    , ("M-s s",                      spawn "systemctl suspend")
@@ -145,7 +145,6 @@ myAdditionalKeys = [ ("M-s l",                      spawn "dm-tool lock")
                    , ("M-<Return>",                 spawn myTerminal)
                    -- misc
                    , ("M-w",                        kill)
-                   , ("<XF86ModeLock>",             spawn "light-locker-command -l")
                    , ("<XF86AudioPlay>",            spawn "playerctl play-pause")
                    , ("<XF86AudioStop>",            spawn "playerctl stop")
                    , ("<XF86AudioPrev>",            spawn "playerctl previous")
