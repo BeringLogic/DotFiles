@@ -6,6 +6,7 @@
 -- https://www.youtube.com/watch?v=6pAG3BHurdM&t=2589s
 
 require("config/options")
+require("config/keymaps")
 
 -- Lazy Plugins Manager
 require("config.lazy")
