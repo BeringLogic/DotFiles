@@ -42,9 +42,8 @@ return {
 			sections = {
 				{
 					section = "terminal",
-					cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt",
-					height = 17,
-					padding = 1,
+					cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt; sleep .1",
+					height = 16,
 				},
 				{
 					pane = 2,
