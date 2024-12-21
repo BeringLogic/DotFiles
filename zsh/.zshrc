@@ -142,8 +142,7 @@ esac
 eval "$(zoxide init zsh)"
 if [ "$DISTRIBUTION" != "debian" ]; then
 	function z() {
-	    __zoxide_z "$@"
-	    ll
+	    __zoxide_z "$@" && ll
 	}
 fi
 
