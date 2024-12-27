@@ -52,6 +52,7 @@ myProjects =
         [ Project { projectName      = "4"
                   , projectDirectory = "~/"
                   , projectStartHook = Just $ do spawn "alacritty -e ssh linode.ringlogic.com"
+                                                 spawn "alacritty -e ssh muthur"
                                                  spawn myTerminal
                                                  sendMessage $ JumpToLayout "Left"
                   }
