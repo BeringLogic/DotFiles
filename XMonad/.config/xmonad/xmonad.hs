@@ -36,7 +36,6 @@ myStartupHook = do
                   spawnOnce "xsetroot -cursor_name left_ptr"
                   spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 0 --tint 0x000000 --height 22 --iconspacing 3 &"
                   spawnOnce "nm-applet &"
-                  spawnOnce "volumeicon &"
                   spawnOnce "blueman-applet &"
                   spawnOnce "arch-update --tray"
                   spawnOnce "redshift-gtk &"
@@ -44,6 +43,7 @@ myStartupHook = do
                   spawnOnce "ckb-next -b"
                   spawnOnce "picom -b"
                   spawnOnce "light-locker --lock-after-screensaver=300 --lock-on-suspend &"
+                  spawnOnce "volumeicon &"
 
 myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
 
