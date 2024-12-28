@@ -27,7 +27,7 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.SpawnOnce
 import qualified XMonad.StackSet as W
 
-myTerminal = "alacritty"
+myTerminal = "ghostty"
 
 myStartupHook = do
                   spawnOnce "deadd-notification-center &"
@@ -51,8 +51,8 @@ myProjects :: [Project]
 myProjects = 
         [ Project { projectName      = "4"
                   , projectDirectory = "~/"
-                  , projectStartHook = Just $ do spawn "alacritty -e ssh linode.ringlogic.com"
-                                                 spawn "alacritty -e ssh muthur"
+                  , projectStartHook = Just $ do spawn "ghostty -e ssh linode.ringlogic.com"
+                                                 spawn "ghostty -e ssh muthur"
                                                  spawn myTerminal
                                                  sendMessage $ JumpToLayout "Left"
                   }
