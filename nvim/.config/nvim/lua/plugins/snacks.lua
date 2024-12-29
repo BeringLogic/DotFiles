@@ -17,10 +17,16 @@ return {
 			win = { style = "input" },
 			expand = true,
 		},
-    indent = {
-      enabled = true,
-      char = "┆", -- choose from '┆', '┊', '¦', ':'
-    },
+		indent = {
+			indent = {
+				enabled = true,
+				char = "┆", -- choose from '┆', '┊', '¦', ':'
+			},
+			scope = {
+				enabled = true,
+				char = "┆", -- choose from '┆', '┊', '¦', ':'
+			},
+		},
 		scroll = { enabled = true },
 		win = { enabled = true },
 		styles = {
