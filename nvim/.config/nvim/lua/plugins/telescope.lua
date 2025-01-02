@@ -30,6 +30,7 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+        file_ignore_patterns = { "node_modules", ".git" },
 			})
 
 			vim.keymap.set(
