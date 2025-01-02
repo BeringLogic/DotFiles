@@ -1,3 +1,7 @@
 theme=catppuccin-mocha
 desktop-notifications=true
 window-decoration=false
+window-padding-x=15
+window-padding-y=15
+focus-follows-mouse=true
+
