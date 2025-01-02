@@ -22,7 +22,16 @@ return {
 				},
         pickers = {
           find_files = {
-            hidden = true
+            find_command = {
+              "rg",
+              "--files",
+              "--hidden",
+              "--follow",
+              "--glob",
+              "!**/.git/*",
+              "--color",
+              "never"
+            }
           }
         },
 				extensions = {
@@ -30,7 +39,6 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
-        file_ignore_patterns = { "node_modules", ".git" },
 			})
 
 			vim.keymap.set(
