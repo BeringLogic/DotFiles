@@ -6,6 +6,6 @@ return {
   },
 
   opts = {
-    model = "qwen2.5-coder",
+    model = "qwen2.5-coder:3b",
   },
 }
