@@ -5,6 +5,8 @@ vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default regis
 
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 vim.opt.signcolumn = "yes"
 
 vim.opt.expandtab = true
