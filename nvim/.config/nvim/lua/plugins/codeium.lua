@@ -8,6 +8,12 @@ return {
     require("codeium").setup({
       virtual_text = {
         enabled = true,
+        key_bindings = {
+          clear = "<S-Tab>",
+          accept_word = "<M-Tab>",
+          next = "<C-M-Tab>",
+          prev = "<C-M-S-Tab>",
+        }
       },
     })
   end,
