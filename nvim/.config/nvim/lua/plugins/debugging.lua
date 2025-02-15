@@ -1,12 +1,16 @@
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
-    "nvim-neotest/nvim-nio",
     "rcarriga/nvim-dap-ui",
+    "nvim-neotest/nvim-nio",
+    "leoluz/nvim-dap-go",
   },
   config = function()
     local dap = require("dap")
     local dapui = require("dapui")
+
+    require("dapui").setup()
+    require("dap-go").setup()
 
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
@@ -20,6 +24,8 @@ return {
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
+
+    vim.keymap.set("n", "<Leader>db", dap.toggle_breakpoint, { desc = "Debugger Toggle Breakpoint" })
     vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Debugger Continue" })
   end,
 }
