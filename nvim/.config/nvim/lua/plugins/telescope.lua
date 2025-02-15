@@ -73,6 +73,8 @@ return {
 			vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next QuickFix" })
 			vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Previous QuickFix" })
 
+      vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Find Diagnostics" })
+
 			require("telescope").load_extension("ui-select")
 		end,
 	},
