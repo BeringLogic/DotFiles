@@ -74,6 +74,7 @@ return {
 			vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Previous QuickFix" })
 
       vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Find Diagnostics" })
+      vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find Buffers" })
 
 			require("telescope").load_extension("ui-select")
 		end,
