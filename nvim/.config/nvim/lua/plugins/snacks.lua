@@ -3,37 +3,8 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
-		bigfile = { enabled = true },
-		notifier = { enabled = true },
-		quickfile = { enabled = true },
-		rename = { enabled = true },
-		statuscolumn = { enabled = true },
 		animate = { enabled = true },
-		dim = { enabled = true },
-		input = {
-			enabled = true,
-			icon = " ",
-			icon_hl = "SnacksInputIcon",
-			win = { style = "input" },
-			expand = true,
-		},
-		indent = {
-			indent = {
-				enabled = true,
-				char = "┆", -- choose from '┆', '┊', '¦', ':'
-			},
-			scope = {
-				enabled = true,
-				char = "┆", -- choose from '┆', '┊', '¦', ':'
-			},
-		},
-		scroll = { enabled = true },
-		win = { enabled = true },
-		styles = {
-			notification = {
-				wo = { wrap = true }, -- Wrap notifications
-			},
-		},
+		bigfile = { enabled = true },
 		dashboard = {
 			enabled = true,
 			preset = {
@@ -62,17 +33,54 @@ return {
 				},
 			},
 		},
+		dim = { enabled = true },
+		indent = {
+			indent = {
+				enabled = true,
+				char = "┆", -- choose from '┆', '┊', '¦', ':'
+			},
+			scope = {
+				enabled = true,
+				char = "┆", -- choose from '┆', '┊', '¦', ':'
+			},
+		},
+		input = {
+			enabled = true,
+			icon = " ",
+			icon_hl = "SnacksInputIcon",
+			win = { style = "input" },
+			expand = true,
+		},
     lazygit = { enabled = true },
+    notifier = { enabled = true },
+    notify = { enabled = true },
+    picker = {
+      enabled = true,
+    },
+		quickfile = { enabled = true },
+		rename = { enabled = true },
+		scroll = { enabled = true },
+		statuscolumn = { enabled = true },
+		win = { enabled = true },
 	},
 	keys = {
-		{
-			"<leader>n",
-			function()
-				Snacks.notifier.show_history()
-			end,
-			desc = "Notification History",
-		},
     { "<leader>lg", function() Snacks.lazygit.open() end, desc = "LazyGit", },
+    { "<C-p>", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<leader>pb", function() Snacks.picker.buffers() end, desc = "Buffers" },
+    { "<leader>p/", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>pn", function() Snacks.picker.notifications() end, desc = "Notification History" },
+    { "<leader>pr", function() Snacks.picker.registers() end, desc = "Registers" },
+    { "<leader>p:", function() Snacks.picker.commands() end, desc = "Commands" },
+    { "<leader>pd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
+    { "<leader>pk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
+    { "<leader>pm", function() Snacks.picker.marks() end, desc = "Marks" },
+    { "<leader>pq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
+    {	"]q", "<cmd>cnext<CR>", desc = "Next QuickFix" },
+    {	"[q", "<cmd>cprev<CR>", desc = "Previous QuickFix" },
+    { "<leader>py", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
+    { "<leader>ps", function() Snacks.picker.spelling() end, desc = "Spelling Options" },
+    { "<leader>pt", function() Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc = "TODOs" },
+    { "<leader>ph", function() Snacks.picker.help() end, desc = "Help" },
 	},
 	init = function()
 		local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
