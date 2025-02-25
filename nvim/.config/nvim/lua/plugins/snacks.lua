@@ -62,6 +62,7 @@ return {
 				},
 			},
 		},
+    lazygit = { enabled = true },
 	},
 	keys = {
 		{
@@ -71,6 +72,7 @@ return {
 			end,
 			desc = "Notification History",
 		},
+    { "<leader>lg", function() Snacks.lazygit.open() end, desc = "LazyGit", },
 	},
 	init = function()
 		local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
