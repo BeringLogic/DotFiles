@@ -75,6 +75,7 @@ return {
 
       vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Find Diagnostics" })
       vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find Buffers" })
+      vim.keymap.set("n", "<leader>fy", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Find Document Symbols" })
 
 			require("telescope").load_extension("ui-select")
 		end,
