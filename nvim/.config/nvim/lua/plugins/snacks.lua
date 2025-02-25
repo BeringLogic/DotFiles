@@ -65,7 +65,7 @@ return {
 	},
 	keys = {
     { "<leader>lg", function() Snacks.lazygit.open() end, desc = "LazyGit", },
-    { "<C-p>", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<C-p>", function() Snacks.picker.files({ hidden = true }) end, desc = "Find Files" },
     { "<leader>pb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>p/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>pn", function() Snacks.picker.notifications() end, desc = "Notification History" },
