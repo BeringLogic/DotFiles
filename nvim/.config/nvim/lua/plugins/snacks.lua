@@ -75,8 +75,6 @@ return {
     { "<leader>pk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>pm", function() Snacks.picker.marks() end, desc = "Marks" },
     { "<leader>pq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
-    {	"]q", "<cmd>cnext<CR>", desc = "Next QuickFix" },
-    {	"[q", "<cmd>cprev<CR>", desc = "Previous QuickFix" },
     { "<leader>py", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>ps", function() Snacks.picker.spelling() end, desc = "Spelling Options" },
     { "<leader>pt", function() Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc = "TODOs" },
