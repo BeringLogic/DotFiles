@@ -6,13 +6,13 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# Fira Code
+# Lilex
 
-**Fira Code** is a free monospaced font with programming ligatures.
+**Lilex** is an open source programming font
 
-For more information have a look at the upstream website: https://github.com/tonsky/FiraCode
+For more information have a look at the upstream website: https://github.com/mishamyrt/Lilex
 
-Version: 6.2
+Version: 2.400
 
 ## Which font?
 
