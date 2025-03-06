@@ -70,6 +70,7 @@ return {
     { "<leader>p/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>pn", function() Snacks.picker.notifications() end, desc = "Notification History" },
     { "<leader>pr", function() Snacks.picker.registers() end, desc = "Registers" },
+    { "<F24>", function() Snacks.picker.lsp_references() end, desc = "LSP References" }, -- SHIFT-F12
     { "<leader>p:", function() Snacks.picker.commands() end, desc = "Commands" },
     { "<leader>pd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
     { "<leader>pk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
