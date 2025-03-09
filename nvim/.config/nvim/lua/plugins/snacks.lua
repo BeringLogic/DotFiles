@@ -68,7 +68,7 @@ return {
     { "<C-p>", function() Snacks.picker.files({ hidden = true, matcher = { frecency = true }}) end, desc = "Find Files" },
     { "<leader>pb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>p/", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader>pn", function() Snacks.picker.notifications() end, desc = "Notification History" },
+    { "<leader>pn", function() Snacks.picker.notifications({ win = { preview = { wo = { wrap = true } } } }) end, desc = "Notification History" },
     { "<leader>pr", function() Snacks.picker.registers() end, desc = "Registers" },
     { "<F24>", function() Snacks.picker.lsp_references() end, desc = "LSP References" }, -- SHIFT-F12
     { "<leader>p:", function() Snacks.picker.commands() end, desc = "Commands" },
