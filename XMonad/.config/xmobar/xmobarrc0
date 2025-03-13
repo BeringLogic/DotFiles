@@ -1,7 +1,7 @@
 Config { 
 
    -- appearance
-     font =         "FiraCodeNerdFont Bold 10"
+     font =         "LilexNerdFont Bold 10"
    , bgColor =      "black"
    , fgColor =      "white"
    , alpha = 0
