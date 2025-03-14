@@ -58,7 +58,7 @@ myProjects =
                   }
         , Project { projectName      = "\xf269"
                   , projectDirectory = "~/"
-                  , projectStartHook = Just $ do spawn "firefox"
+                  , projectStartHook = Just $ do spawn "librewolf"
                   }
         , Project { projectName      = "\xf1b6"
                   , projectDirectory = "~/"
