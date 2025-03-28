@@ -45,15 +45,13 @@ myStartupHook = do
                   spawnOnce "light-locker --lock-after-screensaver=300 --lock-on-suspend &"
                   spawnOnce "volumeicon &"
 
-myWorkspaces = ["\xf015", "2", "3", "4", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
+myWorkspaces = ["\xf015", "2", "3", "\xe7f8", "\xf269", "6", "7", "8", "\xf1b6", "10", "\xf2a0", "\xf1bc"]
 
 myProjects :: [Project]
 myProjects = 
-        [ Project { projectName      = "4"
+        [ Project { projectName      = "\xf015"
                   , projectDirectory = "~/"
-                  , projectStartHook = Just $ do spawn "ghostty -e ssh linode.ringlogic.com"
-                                                 spawn "ghostty -e ssh muthur"
-                                                 spawn myTerminal
+                  , projectStartHook = Just $ do spawn myTerminal
                                                  sendMessage $ JumpToLayout "Left"
                   }
         , Project { projectName      = "\xf269"
