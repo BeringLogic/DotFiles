@@ -82,6 +82,11 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# TERM for root in debian
+if [[ "$DISTRIBUTION" == "debian" && "$UID" == "0" ]]; then
+  export TERM=xterm-256color
+fi
+
 # Aliases
 alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
 alias ll='ls -l'
