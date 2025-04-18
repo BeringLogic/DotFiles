@@ -15,39 +15,30 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "saghen/blink.cmp",
+    },
     lazy = false,
-
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+      servers = {
+        gopls = {},
+        cssls = {},
+        bashls = {},
+        html = {},
+        jsonls = {},
+        lua_ls = {},
+        sqlls = {},
+      }
       local lspconfig = require("lspconfig")
-      lspconfig.gopls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.cssls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.bashls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
-      lspconfig.jsonls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.sqlls.setup({
-        capabilities = capabilities
-      })
-
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc="Hover" })
-      vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc="Definitions" })
-      vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, { desc="Code Actions" })
-      vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc="Rename" })
+      for server, config in pairs(servers) do
+        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+        lspconfig[server].setup(config)
+      end
     end,
+    keys = {
+      { "<F12>",      function() vim.lsp.buf.definition() end,  desc = "Definitions" },
+      { "<leader>ca", function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
+      { "<F2>",       function() vim.lsp.buf.rename() end,      desc = "Rename" },
+    },
   },
 }
-
