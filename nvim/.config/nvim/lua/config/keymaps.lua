@@ -4,3 +4,5 @@ vim.keymap.set("n", "<Leader>gs", "<CMD>setlocal spell!<CR>", { desc="Toggle Spe
 
 vim.keymap.set("n", "<leader><leader>", "<cmd>e #<CR>", { desc = "Previous File" })
 
+vim.keymap.set("n", "<leader>gd", "<CMD>lua vim.diagnostic.open_float()<CR>", { desc = "Show Diagnostics" })
+
