@@ -20,7 +20,7 @@ return {
     },
     lazy = false,
     config = function()
-      servers = {
+      local servers = {
         gopls = {},
         cssls = {},
         bashls = {},
