@@ -7,6 +7,8 @@ return {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.trivy,
         null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.gofumpt,
+        null_ls.builtins.formatting.prettier,
       },
     })
 
