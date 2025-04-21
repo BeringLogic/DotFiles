@@ -29,8 +29,7 @@ return {
 				{
 					pane = 2,
 					{ section = "keys", padding = 1 },
-					-- { section = "recent_files", icon = "", title = "Recent Files", indent = 2 },
-					{ section = "projects", icon = "", title = "Projects", indent = 2 },
+					{ section = "projects", icon = "", title = "Projects", indent = 2 },
 				},
 			},
 		},
@@ -38,11 +37,11 @@ return {
 		indent = {
 			indent = {
 				enabled = true,
-				char = "┆", -- choose from '┆', '┊', '¦', ':'
+				char = "¦", -- choose from '┆', '┊', '¦', ':'
 			},
 			scope = {
 				enabled = true,
-				char = "┆", -- choose from '┆', '┊', '¦', ':'
+				char = "¦", -- choose from '┆', '┊', '¦', ':'
 			},
 		},
 		input = {
