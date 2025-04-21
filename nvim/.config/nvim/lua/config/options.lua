@@ -26,7 +26,7 @@ vim.opt.backspace = { "indent", "eol", "start" }
 
 vim.opt.swapfile = false
 
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.o.spelllang = "en_ca,fr"
 
@@ -42,3 +42,19 @@ vim.diagnostic.config {
   underline = true,
   severity_sort = true,
 }
+
+vim.opt.undofile = true
+
+vim.opt.scrolloff = 5
+
+vim.opt.list = true
+vim.opt.listchars = { trail = "·" }
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  desc = "Highlight yanked text",
+})
