@@ -2,9 +2,7 @@ return {
   {
     "williamboman/mason.nvim",
     lazy = false,
-    config = function()
-      require("mason").setup()
-    end,
+    opts = {},
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -16,6 +14,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
       "saghen/blink.cmp",
     },
     lazy = false,
