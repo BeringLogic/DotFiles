@@ -20,7 +20,6 @@ return {
           position = "eol",
         },
         prefix = {
-          normal = "",
           log_point = " ",
           conditional = " ",
           hit_condition = "󰰁 ",
