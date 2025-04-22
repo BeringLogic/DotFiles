@@ -1,14 +1,14 @@
 return {
-	"folke/snacks.nvim",
-	priority = 1000,
-	lazy = false,
-	opts = {
-		animate = { enabled = true },
-		bigfile = { enabled = true },
-		dashboard = {
-			enabled = true,
-			preset = {
-				keys = {
+  "folke/snacks.nvim",
+  priority = 1000,
+  lazy = false,
+  opts = {
+    animate = { enabled = true },
+    bigfile = { enabled = true },
+    dashboard = {
+      enabled = true,
+      preset = {
+        keys = {
           { key = "e",       icon = "",  desc = "New File",              action = "<cmd>enew<CR>" },
           { key = "SPC e",   icon = "",  desc = "Toggle file explorer",  action = "<cmd>NvimTreeToggle<CR>" },
           { key = "C-p",     icon = "󰱼",  desc = "Find File",             action = "<cmd>lua Snacks.picker.files()<CR>" },
@@ -19,51 +19,51 @@ return {
           { key = "SPC lg",  icon = "",  desc = "Lazy Git",              action = "<cmd>lua Snacks.lazygit.open()<CR>" },
           { key = "q",       icon = "󰩈",  desc = "Quit",                  action = "<cmd>qa<CR>" },
         },
-			},
-			sections = {
-				{
-					section = "terminal",
-					cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt; sleep .1",
-					height = 16,
-				},
-				{
-					pane = 2,
-					{ section = "keys", padding = 1 },
-					{ section = "projects", icon = "", title = "Projects", indent = 2 },
-				},
-			},
-		},
-		dim = { enabled = true },
-		indent = {
-			indent = {
-				enabled = true,
-				char = "¦", -- choose from '┆', '┊', '¦', ':'
-			},
-			scope = {
-				enabled = true,
-				char = "¦", -- choose from '┆', '┊', '¦', ':'
-			},
-		},
-		input = {
-			enabled = true,
-			icon = " ",
-			icon_hl = "SnacksInputIcon",
-			win = { style = "input" },
-			expand = true,
-		},
+      },
+      sections = {
+        {
+          section = "terminal",
+          cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt; sleep .1",
+          height = 16,
+        },
+        {
+          pane = 2,
+          { section = "keys", padding = 1 },
+          { section = "projects", icon = "", title = "Projects", indent = 2 },
+        },
+      },
+    },
+    dim = { enabled = true },
+    indent = {
+      indent = {
+        enabled = true,
+        char = "¦", -- choose from '┆', '┊', '¦', ':'
+      },
+      scope = {
+        enabled = true,
+        char = "¦", -- choose from '┆', '┊', '¦', ':'
+      },
+    },
+    input = {
+      enabled = true,
+      icon = " ",
+      icon_hl = "SnacksInputIcon",
+      win = { style = "input" },
+      expand = true,
+    },
     lazygit = { enabled = true },
     notifier = { enabled = true },
     notify = { enabled = true },
     picker = {
       enabled = true,
     },
-		quickfile = { enabled = true },
-		rename = { enabled = true },
-		scroll = { enabled = true },
-		statuscolumn = { enabled = true },
-		win = { enabled = true },
-	},
-	keys = {
+    quickfile = { enabled = true },
+    rename = { enabled = true },
+    scroll = { enabled = true },
+    statuscolumn = { enabled = true },
+    win = { enabled = true },
+  },
+  keys = {
     { "<leader>lg",  function() Snacks.lazygit.open() end,                                                          desc = "LazyGit",                     },
     { "<C-p>",       function() Snacks.picker.files({ hidden = true,                                                matcher = { frecency = true }}) end,  desc = "Find Files" },
     { "<leader>pb",  function() Snacks.picker.buffers() end,                                                        desc = "Buffers" },
@@ -82,19 +82,19 @@ return {
     { "<leader>ph",  function() Snacks.picker.help() end,                                                           desc = "Help" },
     { "<leader>pp",  function() Snacks.picker.projects() end,                                                       desc = "Projects" },
   },
-	init = function()
-		local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
-		vim.api.nvim_create_autocmd("User", {
-			pattern = "NvimTreeSetup",
-			callback = function()
-				local events = require("nvim-tree.api").events
-				events.subscribe(events.Event.NodeRenamed, function(data)
-					if prev.new_name ~= data.new_name or prev.old_name ~= data.old_name then
-						data = data
-						Snacks.rename.on_rename_file(data.old_name, data.new_name)
-					end
-				end)
-			end,
-		})
-	end,
+  init = function()
+    local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "NvimTreeSetup",
+      callback = function()
+        local events = require("nvim-tree.api").events
+        events.subscribe(events.Event.NodeRenamed, function(data)
+          if prev.new_name ~= data.new_name or prev.old_name ~= data.old_name then
+            data = data
+            Snacks.rename.on_rename_file(data.old_name, data.new_name)
+          end
+        end)
+      end,
+    })
+  end,
 }
