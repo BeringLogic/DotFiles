@@ -41,6 +41,8 @@ return {
               ["ac"] = { query = "@class.outer", desc = "Select outer class" },
               ["ic"] = { query = "@class.inner", desc = "Select inner class" },
               ["as"] = { query = "@local.scope", desc = "Select inner scope" },
+              ["aa"] = { query = "@parameter.outer", desc = "Select outer argument" },
+              ["ia"] = { query = "@parameter.inner", desc = "Select inner argument" },
             },
           },
         },
