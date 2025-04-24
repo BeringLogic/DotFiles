@@ -14,7 +14,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
       "saghen/blink.cmp",
     },
     lazy = false,
