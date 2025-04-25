@@ -82,6 +82,7 @@ return {
     { "<leader>pt",  function() Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end,                                 desc = "TODOs" },
     { "<leader>ph",  function() Snacks.picker.help() end,                                                                                   desc = "Help" },
     { "<leader>pp",  function() Snacks.picker.projects() end,                                                                               desc = "Projects" },
+    { "<leader>pi",  function() Snacks.picker.icons() end,                                                                                  desc = "Icons" },
   },
   init = function()
     local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
