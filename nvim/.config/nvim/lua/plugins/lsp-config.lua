@@ -23,6 +23,7 @@ return {
         cssls = {},
         bashls = {},
         html = {},
+        emmet_language_server = { filetypes = { "html", "css", "template" } },
         jsonls = {},
         lua_ls = {},
         sqlls = {},
