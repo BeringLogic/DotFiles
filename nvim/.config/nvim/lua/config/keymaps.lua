@@ -11,3 +11,5 @@ vim.keymap.set("n", "<leader>tc", "<CMD>tabclose<CR>", { desc = "Close Tab" })
 vim.keymap.set("n", "[t", "<CMD>tabprevious<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "]t", "<CMD>tabnext<CR>", { desc = "Next Tab" })
 
+vim.keymap.set("n", "<leader>td", "<CMD>e todo.md<CR>", { desc = "Edit todo.md" })
+
