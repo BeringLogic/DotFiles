@@ -9,12 +9,12 @@ return {
       enabled = true,
       preset = {
         keys = {
-          { key = "e",       icon = "",  desc = "New File",              action = "<cmd>enew<CR>" },
+          { key = "s",       icon = "",  desc = "Load Session",          action = "<cmd>lua require('persistence').load()<CR>" },
+          { key = "n",       icon = "",  desc = "New File",              action = "<cmd>enew<CR>" },
           { key = "SPC e",   icon = "",  desc = "Toggle file explorer",  action = "<cmd>NvimTreeToggle<CR>" },
           { key = "C-p",     icon = "󰱼",  desc = "Find File",             action = "<cmd>lua Snacks.picker.files()<CR>" },
           { key = "SPC p/",  icon = "",  desc = "Find using grep",       action = "<cmd>lua Snacks.picker.grep()<CR>" },
           { key = "SPC pk",  icon = "",  desc = "Find Keymaps",          action = "<cmd>lua Snacks.picker.keymaps()<CR>" },
-          { key = "SPC p:",  icon = "",  desc = "Find Commands",         action = "<cmd>lua Snacks.picker.commands()<CR>" },
           { key = "SPC ph",  icon = "?",  desc = "Find Help",             action = "<cmd>lua Snacks.picker.help()<CR>" },
           { key = "SPC lg",  icon = "",  desc = "Lazy Git",              action = "<cmd>lua Snacks.lazygit.open()<CR>" },
           { key = "q",       icon = "󰩈",  desc = "Quit",                  action = "<cmd>qa<CR>" },
@@ -29,7 +29,7 @@ return {
         {
           pane = 2,
           { section = "keys", padding = 1 },
-          { section = "projects", icon = "", title = "Projects", indent = 2 },
+          { section = "projects", icon = "", title = "Projects", indent = 2 },
         },
       },
     },
