@@ -30,6 +30,16 @@ return {
       local config = require("nvim-treesitter.configs")
       config.setup({
         textobjects = {
+          move = {
+            enable = true,
+            set_jumps = true,
+            goto_previous_start = {
+              ["[a"] = { query = "@parameter.inner", desc = "Previous function argument" },
+            },
+            goto_next_start = {
+              ["]a"] = { query = "@parameter.inner", desc = "Next function argument" },
+            },
+          },
           select = {
             enable = true,
             lookahead = true,
