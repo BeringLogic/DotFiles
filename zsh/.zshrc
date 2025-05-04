@@ -113,7 +113,7 @@ case "$DISTRIBUTION" in
   "debian")
   	alias cat='batcat --wrap never'
   	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-    alias v='~/.bin/nvim-linux-x86_64.appimage'
+    alias v='~/bin/nvim-linux-x86_64.appimage'
     ;;
   "manjaro" | "arch")
   	alias cat='bat --wrap never'
