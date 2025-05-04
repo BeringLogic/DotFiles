@@ -107,18 +107,17 @@ alias gitP='git push muthur ; git push github'
 alias gitp='git pull'
 alias catp='cat -p --no-pager'
 alias lg='lazygit'
+alias v='nvim'
 alias sv='sudo nvim'
 
 case "$DISTRIBUTION" in
   "debian")
   	alias cat='batcat --wrap never'
   	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-    alias v='~/bin/nvim-linux-x86_64.appimage'
     ;;
   "manjaro" | "arch")
   	alias cat='bat --wrap never'
   	alias man='batman'
-    alias v='nvim'
     ;;
 esac
 
