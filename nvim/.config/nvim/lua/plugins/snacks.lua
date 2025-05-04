@@ -67,6 +67,7 @@ return {
     { "<leader>lg",  function() Snacks.lazygit.open() end,                                                                                  desc = "LazyGit", },
     { "<C-p>",       function() Snacks.picker.files({ hidden = true, matcher = { frecency = true }}) end,                                   desc = "Find Files" },
     { "<C-s-p>",     function() Snacks.picker.files({ hidden = true, matcher = { frecency = true }, cwd = vim.fn.stdpath("config") }) end,  desc = "Find Config Files" },
+    { "<leader>pN",  function() Snacks.picker.files({ matcher = { frecency = true }, cwd = "~/Documents/Notes" }) end,                      desc = "Find Notes" },
     { "<leader>pb",  function() Snacks.picker.buffers() end,                                                                                desc = "Buffers" },
     { "<leader>p/",  function() Snacks.picker.grep() end,                                                                                   desc = "Grep" },
     { "<leader>pn",  function() Snacks.picker.notifications({ win = { preview = { wo = { wrap = true } } } }) end,                          desc = "Notification History" },
