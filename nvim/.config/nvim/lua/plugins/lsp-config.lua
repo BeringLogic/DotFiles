@@ -1,5 +1,22 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "saghen/blink.cmp",
+    },
+    lazy = false,
+    config = function()
+      vim.lsp.config("emmet_language_server", {
+        filetypes = { "html", "css", "template" },
+      })
+    end,
+    keys = {
+      { "<F12>",      function() vim.lsp.buf.definition() end,  desc = "Definitions" },
+      { "<leader>ca", function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
+      { "<F2>",       function() vim.lsp.buf.rename() end,      desc = "Rename" },
+    },
+  },
+  {
     "williamboman/mason.nvim",
     lazy = false,
     opts = {},
@@ -9,35 +26,6 @@ return {
     lazy = false,
     opts = {
       auto_install = true,
-    },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "saghen/blink.cmp",
-    },
-    lazy = false,
-    config = function()
-      local servers = {
-        gopls = {},
-        cssls = {},
-        bashls = {},
-        html = {},
-        emmet_language_server = { filetypes = { "html", "css", "template" } },
-        jsonls = {},
-        lua_ls = {},
-        sqlls = {},
-      }
-      local lspconfig = require("lspconfig")
-      for server, config in pairs(servers) do
-        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-        lspconfig[server].setup(config)
-      end
-    end,
-    keys = {
-      { "<F12>",      function() vim.lsp.buf.definition() end,  desc = "Definitions" },
-      { "<leader>ca", function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
-      { "<F2>",       function() vim.lsp.buf.rename() end,      desc = "Rename" },
     },
   },
 }
