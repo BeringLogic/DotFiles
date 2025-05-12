@@ -217,6 +217,11 @@ notification:
         previous: playerctl previous
         next: playerctl next
 
+  - match:
+      urgency: critical
+    modify:
+      timeout: 0
+
   # - match:
   #     title: Bildschirmhelligkeit
   #   modify:
