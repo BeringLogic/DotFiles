@@ -3,7 +3,7 @@ modi: "run,drun,ssh";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-font: "SauceCodePro 26";
+font: "FiraCode Nerd Font 26";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -144,9 +144,5 @@ drun-match-fields: "name,generic,exec";
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
-@import "/usr/share/rofi/themes/Monokai.rasi"
-
-* {
-    separatorcolor:              rgba ( 56, 80, 56, 100 % );
-    selected-normal-background:  rgba ( 35, 90, 37, 100 % );
-}
+@import "~/.config/rofi/catppuccin-mocha.rasi"
+@theme "~/.config/rofi/catppuccin-default.rasi"
