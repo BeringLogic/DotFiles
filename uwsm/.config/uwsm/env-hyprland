@@ -3,9 +3,5 @@
 # and ~/.config/uwsm/env-hyprland for HYPR* and AQ_* variables.
 # The format is export KEY=VAL.
 
-export XCURSOR_SIZE=24
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=Hyprland
+export HYPRCURSOR_SIZE=24
 
