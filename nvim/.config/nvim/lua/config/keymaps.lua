@@ -5,6 +5,10 @@ vim.keymap.set("n", "<Leader>gs", "<CMD>setlocal spell!<CR>", { desc="Toggle Spe
 vim.keymap.set("n", "<leader><leader>", "<cmd>e #<CR>", { desc = "Previous File" })
 
 vim.keymap.set("n", "<leader>gd", "<CMD>lua vim.diagnostic.open_float()<CR>", { desc = "Show Diagnostics" })
+vim.keymap.set("n", "<leader>gD", function()
+  vim.g.diagnostic_virtual_lines = not vim.g.diagnostic_virtual_lines
+  vim.diagnostic.config({ virtual_lines = vim.g.diagnostic_virtual_lines })
+end, { desc = "Toggle Diagnostics Virtual Lines" })
 
 vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>", { desc = "New Tab" })
 vim.keymap.set("n", "<leader>tc", "<CMD>tabclose<CR>", { desc = "Close Tab" })

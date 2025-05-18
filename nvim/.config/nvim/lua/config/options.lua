@@ -42,6 +42,7 @@ vim.diagnostic.config {
   severity_sort = true,
   virtual_lines = true,
 }
+vim.g.diagnostic_virtual_lines = true
 
 vim.opt.undofile = true
 
