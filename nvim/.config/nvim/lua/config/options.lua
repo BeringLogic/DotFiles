@@ -49,7 +49,6 @@ vim.opt.undofile = true
 vim.opt.scrolloff = 5
 
 vim.opt.list = true
--- vim.opt.listchars = { trail = "·", tab = "󰌒󰌒" }
 vim.opt.listchars = { trail = "·", tab = "—" }
 
 vim.api.nvim_create_autocmd("TextYankPost", {
