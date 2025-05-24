@@ -61,6 +61,11 @@ return {
     rename = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
+    styles = {
+      notification_history = {
+        wo = { wrap = true }
+      }
+    },
     win = { enabled = true },
   },
   keys = {
@@ -70,7 +75,7 @@ return {
     { "<leader>pN",  function() Snacks.picker.files({ matcher = { frecency = true }, cwd = "~/Documents/Notes" }) end,                      desc = "Find Notes" },
     { "<leader>pb",  function() Snacks.picker.buffers() end,                                                                                desc = "Buffers" },
     { "<leader>p/",  function() Snacks.picker.grep() end,                                                                                   desc = "Grep" },
-    { "<leader>pn",  function() Snacks.picker.notifications({ win = { preview = { wo = { wrap = true } } } }) end,                          desc = "Notification History" },
+    { "<leader>n",   function() Snacks.notifier.show_history() end,                                                                         desc = "Notification History" },
     { "<leader>pr",  function() Snacks.picker.registers() end,                                                                              desc = "Registers" },
     { "<F24>",       function() Snacks.picker.lsp_references() end,                                                                         desc = "LSP References" }, -- SHIFT-F12
     { "<leader>p:",  function() Snacks.picker.commands() end,                                                                               desc = "Commands" },
