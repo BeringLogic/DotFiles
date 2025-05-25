@@ -50,6 +50,7 @@ vim.g.diagnostic_virtual_lines = false
 vim.opt.undofile = true
 
 vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 10
 
 vim.opt.list = true
 vim.opt.listchars = { trail = "·", tab = "—" }
