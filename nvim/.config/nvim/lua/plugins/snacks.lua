@@ -56,6 +56,20 @@ return {
     notify = { enabled = true },
     picker = {
       enabled = true,
+      win = {
+        input = {
+          keys = {
+            ["<PageUp>"] = { "preview_scroll_up", mode = { "n", "i" } },
+            ["<PageDown>"] = { "preview_scroll_down", mode = { "n", "i" } },
+          }
+        },
+        list = {
+          keys = {
+            ["<PageUp>"] = "preview_scroll_up",
+            ["<PageDown>"] = "preview_scroll_down",
+          }
+        }
+      }
     },
     quickfile = { enabled = true },
     rename = { enabled = true },
