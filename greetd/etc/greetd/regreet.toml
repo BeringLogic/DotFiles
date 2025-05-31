@@ -1,0 +1,13 @@
+[commands]
+reboot = [ "systemctl", "reboot" ]
+poweroff = [ "systemctl", "poweroff" ]
+
+[background]
+path = "/etc/greetd/milky.way.jpg"
+fit = "Contain"
+
+[GTK]
+application_prefer_dark_theme = true
+
+[appearance]
+greeting_msg = "monster"

@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = linux
+
+[Action]
+Description = Send notification when a reboot is required
+When = PostTransaction
+Exec = /usr/bin/sudo -u phil DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/notify-send -u critical -i /usr/share/pixmaps/archlinux-logo.png "Reboot required"
+
