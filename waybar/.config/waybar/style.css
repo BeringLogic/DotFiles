@@ -3,6 +3,8 @@
 window#waybar {
   background-color: @base;
   color: @text;
+  font-family: "LilexNerdFont";
+  font-weight: bold;
 }
 
 #workspaces button {
@@ -117,6 +119,13 @@ window#waybar {
   color: @surface0;
   padding: 0 5px 0 5px;
 }
+
+#custom-weather {
+  background-color: @yellow;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
 #tray {
   background-color: @surface0;
   padding: 0 5px 0 5px;
