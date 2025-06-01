@@ -3,7 +3,7 @@
   "spacing": 8, // Gaps between modules (4px)
 
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "hyprland/submap", "keyboard-state"],
+  "modules-left": ["hyprland/workspaces", "niri/workspaces", "hyprland/submap", "keyboard-state"],
   "modules-center": ["custom/notification", "clock", "systemd-failed-units"],
   "modules-right": [
     "idle_inhibitor",
@@ -38,6 +38,9 @@
       "special": ""
     },
     "show-special": true
+  },
+
+  "niri/workspaces": {
   },
 
   "hyprland/submap": {

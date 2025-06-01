@@ -9,14 +9,18 @@ window#waybar {
 
 #workspaces button {
   background-color: @surface0;
+  margin: 1px;
   padding: 0 5px 0 5px;
+  border-radius: 0px;
 }
 #workspaces button.active {
   color: @green;
+  border: solid 1px @green;
 }
 #workspaces button.urgent {
   background-color: @red;
   color: @surface0;
+  border: solid 1px @red;
 }
 
 #submap {
