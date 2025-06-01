@@ -2,11 +2,11 @@
 
 lock=' Lock'
 suspend='󰒲 Suspend'
-logout='󰍃 Logout'
+exit='󰍃 Exit'
 reboot='󰑓 Reboot'
 shutdown=' Shutdown'
 
-answer=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -i -p "System menu" -theme-str 'window { width: 500px; }' -no-fixed-num-lines 5)
+answer=$(echo -e "$lock\n$suspend\n$exit\n$reboot\n$shutdown" | rofi -dmenu -i -p "System menu" -theme-str 'window { width: 500px; }' -no-fixed-num-lines 5)
 
 case "$answer" in
   "$lock")
@@ -15,7 +15,7 @@ case "$answer" in
   "$suspend")
     systemctl suspend
     ;;
-  "$logout")
+  "$exit")
     niri msg action quit
     ;;
   "$reboot")
