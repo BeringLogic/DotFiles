@@ -4,9 +4,9 @@ lock=' Lock'
 suspend='󰒲 Suspend'
 exit='󰍃 Exit'
 reboot='󰑓 Reboot'
-shutdown=' Shutdown'
+halt=' Halt'
 
-answer=$(echo -e "$lock\n$suspend\n$exit\n$reboot\n$shutdown" | rofi -dmenu -i -p "System menu" -theme-str 'window { width: 500px; }' -no-fixed-num-lines 5)
+answer=$(echo -e "$lock\n$suspend\n$exit\n$reboot\n$halt" | rofi -dmenu -i -p "System menu" -theme-str 'window { width: 500px; }' -no-fixed-num-lines 5)
 
 case "$answer" in
   "$lock")
@@ -21,7 +21,7 @@ case "$answer" in
   "$reboot")
     systemctl reboot
     ;;
-  "$shutdown")
+  "$halt")
     systemctl poweroff
     ;;
 esac
