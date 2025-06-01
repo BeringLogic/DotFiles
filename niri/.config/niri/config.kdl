@@ -4,6 +4,10 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
 environment {
+    SSH_AUTH_SOCK "/run/user/1000/ssh-agent.socket"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -383,7 +387,7 @@ binds {
     // `niri msg action do-something`.
 
     // shows a list of important hotkeys.
-    // Mod+ { show-hotkey-overlay; }
+    // Mod+EACUTE { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return  { spawn "ghostty"; }
