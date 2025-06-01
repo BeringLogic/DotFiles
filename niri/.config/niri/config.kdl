@@ -6,6 +6,7 @@
 environment {
     QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 hotkey-overlay {
@@ -346,6 +347,11 @@ window-rule {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
 // Example: enable rounded corners for all windows.
