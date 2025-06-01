@@ -5,7 +5,7 @@
 
 environment {
     QT_QPA_PLATFORM "wayland"
-    DISPLAY null
+    DISPLAY ":0"
 }
 
 hotkey-overlay {
@@ -275,6 +275,7 @@ spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "arch-update" "--tray"
 spawn-at-startup "udiskie" "-a" "-s"
 spawn-at-startup "ckb-next" "-b"
+spawn-at-startup "xwayland-satellite"
 spawn-at-startup "librewolf"
 spawn-at-startup "spotify-launcher"
 
