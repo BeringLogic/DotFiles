@@ -85,8 +85,7 @@
     "tooltip-format": "<big><tt>{calendar}</tt></big>",
     "timezones": [
       "America/Montreal",
-      "Europe/Paris",
-      "Asia/Jerusalem"
+      "UTC"
     ],
     "on-click": "xdg-open 'https://calendar.google.com/'",
     "actions":  {
