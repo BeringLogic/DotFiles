@@ -16,6 +16,17 @@ hotkey-overlay {
     skip-at-startup
 }
 
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
+spawn-at-startup "arch-update" "--tray"
+spawn-at-startup "udiskie" "-a" "-s"
+spawn-at-startup "ckb-next" "-b"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "librewolf"
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -268,20 +279,6 @@ overview {
     zoom 0.25
     backdrop-color "#313244"
 }
-
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-
-// This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
-spawn-at-startup "arch-update" "--tray"
-spawn-at-startup "udiskie" "-a" "-s"
-spawn-at-startup "ckb-next" "-b"
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "librewolf"
-spawn-at-startup "spotify-launcher"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
