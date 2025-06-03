@@ -7,6 +7,7 @@ return {
       "text",
     }
     vim.g.bullets_outline_levels = { "num", "abc", "rom", "std-", "std*", "std+" }
+    vim.g.bullets_checkbox_markers = " .ox"
     vim.g.bullets_custom_mappings = {
       { "nmap", "<leader>bx", "<Plug>(bullets-toggle-checkbox)" },
       { "nmap", "o",          "<Plug>(bullets-newline)" },
