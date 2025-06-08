@@ -6,4 +6,5 @@ XMonad/.config/xmonad/xmonad.o
 
 *.bak
 micro/.config/micro/backups
-nvim/.config/nvim/lazy-lock.json
+nvim.main/.config/nvim/lazy-lock.json
+
