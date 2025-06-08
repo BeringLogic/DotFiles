@@ -182,8 +182,8 @@
   },
 
   "custom/weather": {
-    "interval": 300,
-    "exec": "curl 'wttr.in?T&format=1' | sed 's/   / /'"
+    "interval": 3600,
+    "exec": "curl 'wttr.in/Lévis?format=1' | sed 's/   / /'"
   },
 
   "tray": {
