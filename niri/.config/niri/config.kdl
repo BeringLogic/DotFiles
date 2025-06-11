@@ -42,9 +42,6 @@ input {
 
             layout "ca"
         }
-
-        // Enable numlock on startup, omitting this setting disables it.
-        numlock
     }
 
     // Next sections include libinput settings.
@@ -54,13 +51,14 @@ input {
         tap
         // dwt
         // dwtp
-        // drag false
+        drag true
         // drag-lock
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-        // scroll-method "two-finger"
+        scroll-method "edge"
         // disabled-on-external-mouse
+        middle-emulation
     }
 
     mouse {
@@ -87,6 +85,10 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="0%"
+
+    // By default, niri will take over the power button to make it sleep instead of power off.
+    // Set this if you would like to configure the power button elsewhere (i.e. logind.conf).
+    disable-power-key-handling
 }
 
 // You can configure outputs by their name, which you can find
