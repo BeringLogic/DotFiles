@@ -227,6 +227,10 @@ layout {
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
+    insert-hint {
+        color "#a6e3a188"
+    }
+
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
