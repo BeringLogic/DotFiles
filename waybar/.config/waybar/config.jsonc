@@ -3,7 +3,7 @@
   "spacing": 8, // Gaps between modules (4px)
 
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "niri/workspaces", "hyprland/submap", "keyboard-state"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["custom/notification", "clock", "systemd-failed-units"],
   "modules-right": [
     "idle_inhibitor",
@@ -19,44 +19,6 @@
     "custom/weather",
     "tray"
   ],
-
-  // Modules configuration
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "󰲢",
-      "3": "󰲤",
-      "4": "",
-      "5": "",
-      "6": "󰲪",
-      "7": "󰲬",
-      "8": "",
-      "9": "",
-      "10": "",
-      "special": ""
-    },
-    "show-special": true
-  },
-
-  "niri/workspaces": {
-  },
-
-  "hyprland/submap": {
-    "format": "󰧹  Submap: {}",
-    "always-on": true
-  },
-
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": " ",
-      "unlocked": " "
-    }
-  },
 
   "custom/notification": {
     "tooltip": false,
