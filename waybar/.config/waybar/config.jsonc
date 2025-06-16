@@ -89,7 +89,7 @@
     "format": " {status}",
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "on-click": "uwsm app -- blueman-manager"
+    "on-click": "blueman-manager"
   },
 
   "pulseaudio": {
@@ -130,17 +130,17 @@
   "disk#root": {
     "format": "/ {percentage_used}%",
     "path": "/",
-    "on-click": "uwsm app -- ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
   "disk#boot": {
     "format": "/boot {percentage_used}%",
     "path": "/boot/",
-    "on-click": "uwsm app -- ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
   "disk#data": {
     "format": "~/Data {percentage_used}%",
     "path": "/home/phil/Data/",
-    "on-click": "uwsm app -- ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
 
   "custom/weather": {
