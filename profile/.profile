@@ -11,3 +11,8 @@ export PAGER=/usr/bin/less
 
 export GOPATH="$XDG_DATA_HOME/go"
 
+export ANDROID_HOME="$HOME/.local/android"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
