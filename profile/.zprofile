@@ -11,7 +11,7 @@ export PAGER=/usr/bin/less
 
 export GOPATH="$XDG_DATA_HOME/go"
 
-export JAVA_HOME=/usr/lib/jvm/java-version-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
 export ANDROID_HOME="/opt/android-sdk"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
