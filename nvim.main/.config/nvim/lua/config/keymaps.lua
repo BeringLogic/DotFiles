@@ -24,3 +24,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 vim.keymap.set("v", "<", "<gv", { desc = "Indent line left" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent line right" })
+
+vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
