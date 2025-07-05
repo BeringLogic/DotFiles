@@ -337,6 +337,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id="firefox"
+    border {
+        width 3
+    }
+}
+
+window-rule {
     match app-id="thunderbird"
     border {
         width 3
