@@ -26,6 +26,7 @@ spawn-at-startup "udiskie" "-a" "-s"
 spawn-at-startup "ckb-next" "-b"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "thunderbird"
+spawn-at-startup "firefox"
 spawn-at-startup "librewolf"
 
 // Input device configuration.
