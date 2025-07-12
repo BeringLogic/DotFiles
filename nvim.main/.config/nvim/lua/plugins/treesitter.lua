@@ -83,11 +83,13 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    opts = {
-      mode = "topline",
-    },
+    init = function()
+      require("treesitter-context").setup({
+        enable = true,
+      })
+    end,
     keys = {
-      { "[c", function() require("treesitter-context").go_to_context(vim.v.count1) end, desc = "Go to context" },
+      { "<leader>cc", function() require("treesitter-context").go_to_context(vim.v.count1) end, desc = "Go to context" },
     },
   },
 }
