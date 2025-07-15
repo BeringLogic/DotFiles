@@ -16,7 +16,7 @@ case "$answer" in
     systemctl suspend
     ;;
   "$exit")
-    niri msg action quit
+    niri msg action quit --skip-confirmation
     ;;
   "$reboot")
     systemctl reboot
