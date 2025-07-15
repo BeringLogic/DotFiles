@@ -27,7 +27,7 @@ spawn-at-startup "ckb-next" "-b"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "thunderbird"
 spawn-at-startup "firefox"
-spawn-at-startup "brave-browser"
+spawn-at-startup "brave"
 
 // Input device configuration.
 // Find the full list of options on the wiki:
