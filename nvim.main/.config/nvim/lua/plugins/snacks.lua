@@ -102,6 +102,8 @@ return {
     { "<leader>ph",  function() Snacks.picker.help() end,                                                                                   desc = "Help" },
     { "<leader>pp",  function() Snacks.picker.projects() end,                                                                               desc = "Projects" },
     { "<leader>pi",  function() Snacks.picker.icons() end,                                                                                  desc = "Icons" },
+    { "<leader>pg",  function() Snacks.picker.git_diff() end,                                                                               desc = "git diffs" },
+    { "<leader>pt",  function() Snacks.picker.treesitter() end,                                                                             desc = "Treesitter" },
   },
   init = function()
     local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
