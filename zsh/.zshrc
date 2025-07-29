@@ -83,7 +83,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # TERM for root in debian
-if [[ "$DISTRIBUTION" == "debian" && "$UID" == "0" ]]; then
+if [[ "$DISTRIBUTION" == "debian" ]]; then
   export TERM=xterm-256color
 fi
 
