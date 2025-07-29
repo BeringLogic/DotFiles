@@ -268,12 +268,12 @@ case "$DISTRIBUTION" in
 		/home/phil/bin/neofetch
 		;;
 	"manjaro")
-		/usr/bin/cat ~/Images/manjaro-banner.logo
+		/usr/bin/cat /home/phil/Images/manjaro-banner.logo
 		echo
 		fortune -a
 		;;
 	"arch")
-		/usr/bin/cat ~/Images/arch-banner.logo
+		/usr/bin/cat /home/phil/Images/arch-banner.logo
 		;;
 esac
 ll
