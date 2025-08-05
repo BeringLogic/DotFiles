@@ -404,7 +404,7 @@ binds {
     Mod+N       { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+N { spawn "ghostty" "-e" "nvim" "~/Documents/Notes"; }
     Mod+B       { spawn "bluetoothctl" "connect" "9C:37:CB:32:B5:49"; }
-    Mod+S       { spawn "~/bin/rofi-system-menu.sh"; }
+    Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -412,9 +412,9 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/bin/wpctl.sh" "+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "~/bin/wpctl.sh" "-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "~/bin/wpctl.sh" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "toggle"; }
     XF86AudioStop        allow-when-locked=true { spawn "playerctl" "stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
