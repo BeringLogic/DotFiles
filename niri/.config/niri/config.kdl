@@ -403,6 +403,7 @@ binds {
     Mod+Alt+P   { spawn "rofi" "-show" "ssh"; }
     Mod+N       { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+N { spawn "ghostty" "-e" "nvim" "~/Documents/Notes"; }
+    Mod+Shift+C { spawn "ghostty" "-e" "nvim" "~/.config"; }
     Mod+B       { spawn "bluetoothctl" "connect" "9C:37:CB:32:B5:49"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
 
