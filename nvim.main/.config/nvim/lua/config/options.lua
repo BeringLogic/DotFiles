@@ -66,3 +66,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.opt.autoread = true
 
+vim.opt.winborder = "rounded"
+
