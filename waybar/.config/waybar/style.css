@@ -3,7 +3,7 @@
 window#waybar {
   background-color: @base;
   color: @text;
-  font-family: "Lilex Nerd Font Propo";
+  font-family: "Fira Code Nerd Font Propo";
   font-weight: bold;
 }
 
