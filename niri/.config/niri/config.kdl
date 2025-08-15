@@ -23,6 +23,7 @@ hotkey-overlay {
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "udiskie" "-a" "-s"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "~/.local/bin/randomize-wallpaper.sh"
 
 // Input device configuration.
 // Find the full list of options on the wiki:
@@ -395,6 +396,7 @@ binds {
     Mod+Shift+C { spawn "ghostty" "-e" "nvim" "~/.DotFiles"; }
     Mod+B       { spawn "bluetoothctl" "connect" "9C:37:CB:32:B5:49"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
+    Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
