@@ -7,6 +7,7 @@ application/pdf=org.gnome.Evince.desktop;
 image/jpeg=swayimg.desktop;gimp.desktop;
 image/png=swayimg.desktop;gimp.desktop;
 image/x-xbitmap=swayimg.desktop;gimp.desktop;
+image/webp=swayimg.desktop;gimp.desktop;
 text/html=com.brave.Browser.desktop;
 application/x-php=nvim.desktop;
 application/octet-stream=swayimg.desktop;
