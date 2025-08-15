@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Todo List
+Exec=flatpak 'run' '--command=brave' 'com.brave.Browser' '--profile-directory=Default' '--app-id=hpbgbcmcjeejgedeekhohdliinhikdhm'
+Icon=brave-hpbgbcmcjeejgedeekhohdliinhikdhm-Default
+StartupWMClass=crx_hpbgbcmcjeejgedeekhohdliinhikdhm
+X-Flatpak-Part-Of=com.brave.Browser
+TryExec=/var/lib/flatpak/exports/bin/com.brave.Browser
