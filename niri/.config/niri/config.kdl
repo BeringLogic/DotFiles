@@ -9,7 +9,7 @@ environment {
     XDG_SESSION_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
-    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
 }
 
 hotkey-overlay {
