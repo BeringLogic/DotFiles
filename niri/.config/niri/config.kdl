@@ -395,6 +395,7 @@ binds {
     Mod+Shift+N { spawn "ghostty" "-e" "nvim" "~/Documents/Notes"; }
     Mod+Shift+C { spawn "ghostty" "-e" "nvim" "~/.DotFiles"; }
     Mod+B       { spawn "bluetoothctl" "connect" "9C:37:CB:32:B5:49"; }
+    Mod+Shift+B { spawn "bluetoothctl" "disconnect" "9C:37:CB:32:B5:49"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
