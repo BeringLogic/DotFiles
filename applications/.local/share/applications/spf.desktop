@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=SuperFile
+Comment=TUI File Manager
+Exec=spf
+Icon=superfile
+Terminal=true
+Type=Application
+StartupNotify=false
