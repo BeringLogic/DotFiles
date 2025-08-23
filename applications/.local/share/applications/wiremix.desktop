@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Wiremix
+Comment=TUI mixer
+Exec=ghostty --title=wiremix -e wiremix
+Icon=wiremix
+Terminal=false
+Type=Application
+StartupNotify=false

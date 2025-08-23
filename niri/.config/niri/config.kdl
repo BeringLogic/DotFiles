@@ -360,6 +360,12 @@ window-rule {
     draw-border-with-background false
 }
 
+window-rule {
+    match title="wiremix"
+    match title="bluetui"
+    open-floating true
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
