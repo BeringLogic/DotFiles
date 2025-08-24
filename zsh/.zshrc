@@ -260,7 +260,7 @@ PROMPT="
 # Autorun
 case "$DISTRIBUTION" in
 	"debian")
-		/home/phil/bin/neofetch
+		fastfetch
 		;;
 	"manjaro")
 		/usr/bin/cat /home/phil/Images/manjaro-banner.logo
@@ -268,7 +268,7 @@ case "$DISTRIBUTION" in
 		fortune -a
 		;;
 	"arch")
-		/usr/bin/cat /home/phil/Images/arch-banner.logo
+    fastfetch
 		;;
 esac
 ll
