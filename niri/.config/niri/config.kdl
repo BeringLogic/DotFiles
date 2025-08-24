@@ -399,11 +399,13 @@ binds {
     Mod+Alt+P   { spawn "rofi" "-show" "ssh"; }
     Mod+N       { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+N { spawn "ghostty" "-e" "nvim" "~/Documents/Notes"; }
-    Mod+B       { spawn "bluetoothctl" "connect" "9C:37:CB:32:B5:49"; }
-    Mod+Shift+B { spawn "bluetoothctl" "disconnect" "9C:37:CB:32:B5:49"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
     Mod+Shift+C { spawn "ghostty" "-e" "~/.local/bin/edit-config.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
+
+    Mod+B { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
+    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-hpbgbcmcjeejgedeekhohdliinhikdhm-Default"; }
+    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser" "Welcome | SceneSat – Brave"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
