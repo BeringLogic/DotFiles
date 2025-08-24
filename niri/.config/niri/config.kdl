@@ -403,8 +403,9 @@ binds {
     Mod+Shift+C { spawn "ghostty" "-e" "~/.local/bin/edit-config.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
+    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
     Mod+B { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
-    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-hpbgbcmcjeejgedeekhohdliinhikdhm-Default"; }
+    Mod+D { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-hpbgbcmcjeejgedeekhohdliinhikdhm-Default"; }
     Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser" "Welcome | SceneSat – Brave"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
