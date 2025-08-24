@@ -104,6 +104,10 @@ alias catp='cat -p --no-pager'
 alias lg='lazygit'
 alias v='nvim'
 alias sv='sudo nvim'
+alias dcp='docker compose pull'
+alias dcu='docker compose up -d'
+alias dcl='docker compose logs -f'
+alias dcd='docker compose down'
 
 case "$DISTRIBUTION" in
   "debian")
