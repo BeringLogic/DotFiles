@@ -79,7 +79,7 @@ fi
 
 # TERM for root in debian
 if [[ "$DISTRIBUTION" == "debian" ]]; then
-  export TERM=xterm-truecolor
+  export TERM=xterm-256color
 fi
 
 # Aliases
