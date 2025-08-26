@@ -273,6 +273,7 @@ case "$DISTRIBUTION" in
 		;;
 	"arch")
     fastfetch
+    echo
 		;;
 esac
 ll
