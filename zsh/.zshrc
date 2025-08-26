@@ -163,11 +163,11 @@ autoload colors; colors;
 
 display_logo() {
 	if [[ $EUID == 0 ]]; then
-		echo "%{$fg[red]%}\ueb46 %{$reset_color%}"
+		echo "%{$fg[red]%} %{$reset_color%}"
 	else
 		case "$DISTRIBUTION" in
 			"debian")
-				echo "%{$fg[green]%}\uf306 %{$reset_color%}"
+				echo "%{$fg[red]%} %{$reset_color%}"
 				;;
 			"manjaro")
 				echo "%{$fg[green]%} %{$reset_color%}"
@@ -176,7 +176,7 @@ display_logo() {
 				echo "%{$fg[blue]%} %{$reset_color%}"
 				;;
 			*)
-				echo "%{$fg[red]%}\uf31a %{$reset_color%}"
+				echo "%{$fg[red]%} %{$reset_color%}"
 		esac
 	fi
 }
