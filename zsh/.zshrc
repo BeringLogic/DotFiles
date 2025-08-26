@@ -173,10 +173,10 @@ display_logo() {
 				echo "%{$fg[green]%} %{$reset_color%}"
 				;;
 			"arch")
-				echo "%{$fg[green]%} %{$reset_color%}"
+				echo "%{$fg[blue]%} %{$reset_color%}"
 				;;
 			*)
-				echo "%{$fg[green]%}\uf31a %{$reset_color%}"
+				echo "%{$fg[red]%}\uf31a %{$reset_color%}"
 		esac
 	fi
 }
