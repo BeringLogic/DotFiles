@@ -277,4 +277,5 @@ PROMPT="
 
 # Autorun
 fastfetch
+echo
 ll
