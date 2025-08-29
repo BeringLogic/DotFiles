@@ -27,4 +27,5 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent line right" })
 
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 
-vim.keymap.set("n", "<leader>gP", "!gitP", { desc = "Git Push All" })
+vim.keymap.set("n", "<leader>gP", ":!gitP<CR>", { desc = "Git Push All" })
+
