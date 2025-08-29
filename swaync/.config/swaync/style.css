@@ -181,6 +181,10 @@ trough {
   margin-top: 10px;
 }
 
+.control-center .notification-group:focus .notification-background {
+  background-color: #313244;
+}
+
 scrollbar slider {
   margin: -3px;
   opacity: 0.8;
