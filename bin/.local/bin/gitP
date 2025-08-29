@@ -5,3 +5,4 @@ while read remote; do
   git push --all "$remote"
   echo
 done < <(git remote)
+
