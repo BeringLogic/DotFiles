@@ -90,7 +90,14 @@ if [[ "$DISTRIBUTION" == "debian" ]]; then
 fi
 
 # Aliases
-alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
+case "$DISTRIBUTION" in
+  "debian" | "arch")
+    alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
+    ;;
+  "manjaro")
+    alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S"'
+    ;;
+esac
 alias ll='ls -l'
 alias la='ls -la'
 alias cd..='cd ..'
