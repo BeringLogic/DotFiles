@@ -43,7 +43,7 @@
 
   "clock": {
     "interval": 1,
-    "format": "{:%Y-%m-%d %H:%M:%S %Z}",
+    "format": "{:%Y-%m-%d %H:%M:%S %Z (%A)}",
     "tooltip-format": "<big><tt>{calendar}</tt></big>",
     "timezones": [
       "America/Montreal",
