@@ -23,8 +23,15 @@ DISTRIBUTION=$(distribution)
 
 
 # History
+case "$DISTRIBUTION" in
+  "manjaro" | "arch")
+  	HISTSIZE=10000
+    ;;
+  "debian")
+  	HISTSIZE=1000
+    ;;
+esac
 HISTFILE=~/.histfile
-HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
