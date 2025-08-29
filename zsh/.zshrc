@@ -8,7 +8,7 @@ distribution () {
 		    debian)
 		        dtype="debian"
 		        ;;
-		    manjaro)
+		    manjaro | manjaro-arm)
 				    dtype="manjaro"
     				;;
 		    arch)
@@ -269,18 +269,5 @@ PROMPT="
 
 
 # Autorun
-case "$DISTRIBUTION" in
-	"debian")
-		fastfetch
-		;;
-	"manjaro")
-		/usr/bin/cat /home/phil/Images/manjaro-banner.logo
-		echo
-		fortune -a
-		;;
-	"arch")
-    fastfetch
-    echo
-		;;
-esac
+fastfetch
 ll
