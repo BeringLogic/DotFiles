@@ -68,3 +68,5 @@ vim.opt.autoread = true
 
 vim.opt.winborder = "rounded"
 
+vim.opt.termguicolors = true
+
