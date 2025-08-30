@@ -11,8 +11,11 @@ distribution () {
 		    manjaro | manjaro-arm)
 				    dtype="manjaro"
     				;;
-		    arch | archarm)
+		    arch)
     				dtype="arch"
+    				;;
+		    archarm)
+    				dtype="archarm"
     				;;
 		esac
 	fi
@@ -24,7 +27,7 @@ DISTRIBUTION=$(distribution)
 
 # History
 case "$DISTRIBUTION" in
-  "manjaro" | "arch")
+  "manjaro" | "arch" | "archarm")
   	HISTSIZE=10000
     ;;
   "debian")
@@ -55,7 +58,7 @@ fi
 
 # zsh plugins
 case "$DISTRIBUTION" in
-	"manjaro" | "arch")
+	"manjaro" | "arch" | "archarm")
 		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 		source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 		;;
@@ -94,7 +97,7 @@ case "$DISTRIBUTION" in
   "debian" | "arch")
     alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S" --hyperlink auto'
     ;;
-  "manjaro")
+  "manjaro" | "archarm")
     alias ls='lsd --group-dirs first --date +"%Y-%m-%d %H:%M:%S"'
     ;;
 esac
@@ -128,7 +131,7 @@ case "$DISTRIBUTION" in
   	alias cat='batcat --wrap never'
   	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
     ;;
-  "manjaro" | "arch")
+  "manjaro" | "arch" | "archarm")
   	alias cat='bat --wrap never'
   	alias man='batman'
     ;;
@@ -153,7 +156,7 @@ case "$DISTRIBUTION" in
   "debian")
   	source /usr/share/doc/fzf/examples/key-bindings.zsh
     ;;
-  "manjaro" | "arch")
+  "manjaro" | "arch" | "archarm")
     source <(fzf --zsh)
     ;;
 esac
@@ -186,7 +189,7 @@ display_logo() {
 			"manjaro")
 				echo "%{$fg[green]%} %{$reset_color%}"
 				;;
-			"arch")
+			"arch" | "archarm")
 				echo "%{$fg[blue]%} %{$reset_color%}"
 				;;
 			*)
