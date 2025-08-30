@@ -11,7 +11,7 @@ distribution () {
 		    manjaro | manjaro-arm)
 				    dtype="manjaro"
     				;;
-		    arch)
+		    arch | archarm)
     				dtype="arch"
     				;;
 		esac
