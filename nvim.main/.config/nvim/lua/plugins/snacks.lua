@@ -23,8 +23,9 @@ return {
       sections = {
         {
           section = "terminal",
-          cmd = "cat ~/Images/Kyrsha\\ devant\\ l\\'ordi.txt; sleep .1",
-          height = 16,
+          border = "none",
+          cmd = "cat ~/.config/nvim/Kyrsha\\ devant\\ l\\'ordi.txt; sleep .1",
+          height = 14,
         },
         {
           pane = 2,
