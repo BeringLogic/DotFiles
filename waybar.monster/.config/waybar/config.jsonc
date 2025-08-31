@@ -87,7 +87,7 @@
     "format": " {status}",
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "on-click": "ghostty --title=bluetui -e bluetui"
+    "on-click": "$TERMINAL --title=bluetui -e bluetui"
   },
 
   "pulseaudio": {
@@ -107,7 +107,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "ghostty --title=wiremix -e wiremix"
+    "on-click": "$TERMINAL --title=wiremix -e wiremix"
   },
 
   "temperature": {
@@ -128,17 +128,17 @@
   "disk#root": {
     "format": "/ {percentage_used}%",
     "path": "/",
-    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
   "disk#boot": {
     "format": "/boot {percentage_used}%",
     "path": "/boot/",
-    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
   "disk#data": {
     "format": "~/Data {percentage_used}%",
     "path": "/home/phil/Data/",
-    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
 
   "custom/weather": {
