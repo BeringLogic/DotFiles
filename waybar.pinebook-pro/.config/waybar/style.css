@@ -2,15 +2,19 @@
 
 window#waybar {
   background-color: @base;
-  color: @text;
   font-family: "Fira Code Nerd Font Propo";
   font-weight: bold;
+}
+
+label.module {
+  padding: 3px 6px 0 6px;
+  color: @surface0;
 }
 
 #workspaces button {
   background-color: @surface0;
   margin: 1px;
-  padding: 5px 5px 0 5px;
+  padding: 0;
   border-radius: 0px;
 }
 #workspaces button.active {
@@ -19,125 +23,85 @@ window#waybar {
 }
 #workspaces button.urgent {
   background-color: @red;
-  color: @surface0;
   border: solid 1px @red;
 }
 
-#submap {
-  background-color: @surface0;
-  padding: 0 6px 0 8px;
-}
-#keyboard-state {
-  background-color: @surface0;
-  padding: 0 5px 0 5px;
-}
-#keyboard-state label.locked {
-  background-color: @green;
-  color: @surface0;
-}
-
-
 #custom-notification {
-  padding: 0 8px 0 5px;
+  color: @text;
 }
 #custom-notification.notification,
 #custom-notification.dnd-notification,
 #custom-notification.inhibited-notification,
 #custom-notification.dnd-inhibited-notification {
-  background-color: @red;
   color: @surface0;
+  background-color: @red;
 }
 #custom-notification.dnd-notification,
 #custom-notification.dnd-inhibited-notification {
-  padding: 0 10px 0 3px;
+  color: @surface0;
 }
 
 #clock {
-  padding: 0 5px 0 5px;
+  color: @text;
 }
 
 #systemd-failed-units {
   background-color: @red;
-  color: @surface0; 
-  padding: 0 5px 0 5px;
 }
 
 #idle_inhibitor.deactivated {
-  padding: 0 8px 0 5px;
+  color: @text;
 }
 #idle_inhibitor.activated {
   background-color: @peach;
-  color: @surface0;
-  padding: 0 8px 0 5px;
 }
 
 #mpris {
   background-color: @lavender;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #bluetooth {
   background-color: @blue;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 #bluetooth.on,
 #bluetooth.off {
   background-color: @red;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #pulseaudio {
   background-color: @sapphire;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 #pulseaudio.muted {
   background-color: @red;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #temperature {
   background-color: @pink;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #cpu {
   background-color: @flamingo;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #memory {
   background-color: @rosewater;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #disk {
   background-color: @maroon;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
 #custom-weather {
   background-color: @yellow;
-  color: @surface0;
-  padding: 0 5px 0 5px;
 }
 
-#battery.warning {
-  color: @yellow;
+#battery {
+  background-color: @blue;
 }
-#battery.critical {
-  color: @red;
+#battery.low {
+  background-color: red;
 }
 
 #tray {
   background-color: @surface0;
-  padding: 0 5px 0 5px;
 }
