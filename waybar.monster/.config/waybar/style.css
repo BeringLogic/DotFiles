@@ -10,7 +10,7 @@ window#waybar {
 #workspaces button {
   background-color: @surface0;
   margin: 1px;
-  padding: 0 5px 0 5px;
+  padding: 5px 5px 0 5px;
   border-radius: 0px;
 }
 #workspaces button.active {
