@@ -141,8 +141,7 @@
     "format-discharging": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
     "states": {
-      "warning": 25,
-      "critical": 10
+      "low": 25
     }
   },
 
