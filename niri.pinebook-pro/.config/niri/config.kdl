@@ -21,6 +21,7 @@ hotkey-overlay {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
+spawn-at-startup "brightnessctl" "set" "100%"
 spawn-at-startup "udiskie" "-a" "-s"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "~/.local/bin/randomize-wallpaper.sh"
