@@ -96,4 +96,5 @@ label.module {
 
 #tray {
   background-color: @surface0;
+  padding: 0 5px 0 5px;
 }
