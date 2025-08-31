@@ -13,7 +13,6 @@
     "cpu",
     "memory",
     "disk#root",
-    "disk#boot",
     "disk#data",
     "custom/weather",
     "tray"
@@ -128,11 +127,6 @@
   "disk#root": {
     "format": "/ {percentage_used}%",
     "path": "/",
-    "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
-  },
-  "disk#boot": {
-    "format": "/boot {percentage_used}%",
-    "path": "/boot/",
     "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
   },
   "disk#data": {
