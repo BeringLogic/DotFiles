@@ -1,0 +1,154 @@
+{
+  "height": 30, // Waybar height (to be removed for auto height)
+  "spacing": 8, // Gaps between modules (4px)
+
+  // Choose the order of the modules
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["custom/notification", "clock", "systemd-failed-units"],
+  "modules-right": [
+    "idle_inhibitor",
+    "mpris",
+    "bluetooth",
+    "pulseaudio",
+    "temperature",
+    "cpu",
+    "memory",
+    "disk#root",
+    "custom/weather",
+    "battery",
+    "tray"
+  ],
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%Y-%m-%d %H:%M:%S %Z (%A)}",
+    "tooltip-format": "<big><tt>{calendar}</tt></big>",
+    "timezones": [
+      "America/Montreal",
+      "UTC"
+    ],
+    "on-click": "xdg-open 'https://calendar.google.com/'",
+    "actions":  {
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down"
+    }
+  },
+
+  "systemd-failed-units": {
+    "format": "{nr_failed_user} user, {nr_failed_system} system unit(s) failed",
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    }
+  },
+
+  "mpris": {
+    "format": "{player_icon} {status_icon} {dynamic}", 
+    "player-icons": {
+      "firefox": "",
+      "librewolf": "",
+      "spotify": "",
+      "default": "{player}"
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    },
+    "dynamic-order": ["artist", "album", "title"]
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "on-click": "ghostty --title=bluetui -e bluetui"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
+    "format-bluetooth-muted": "󰝟 {icon}  {format_source}",
+    "format-muted": "󰝟 {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "ghostty --title=wiremix -e wiremix"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": "{}% "
+  },
+
+  "disk#root": {
+    "format": "/ {percentage_used}%",
+    "path": "/",
+    "on-click": "ghostty -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+  },
+
+  "custom/weather": {
+    "interval": 3600,
+    "exec": "curl 'wttr.in/Lévis?format=1' | sed 's/   / /'"
+  },
+
+  "battery": {
+    "format": "{percentage}% {icon}",
+    "format-charging": "{percentage}%  {icon}",
+    "format-discharging": "{percentage}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+    // "icons": {
+    //   "blueman": "bluetooth",
+    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    // }
+  }
+}
