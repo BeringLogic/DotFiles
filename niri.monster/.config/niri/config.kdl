@@ -423,6 +423,10 @@ binds {
     XF86AudioPause       allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
 
+    // brightness keys mappings for brightnessctl.
+    XF86MonBrightnessUp   { spawn "brightnessctl" "set" "+5%"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
