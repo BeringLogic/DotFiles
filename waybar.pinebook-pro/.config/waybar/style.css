@@ -130,6 +130,13 @@ window#waybar {
   padding: 0 5px 0 5px;
 }
 
+#battery.warning {
+  color: @yellow;
+}
+#battery.critical {
+  color: @red;
+}
+
 #tray {
   background-color: @surface0;
   padding: 0 5px 0 5px;
