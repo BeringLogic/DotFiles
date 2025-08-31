@@ -1,4 +1,4 @@
 #!/bin/bash
 
-swww img "$HOME/Images/Wallpapers/$(ls $HOME/Images/Wallpapers | shuf -n 1)"
+swww img "$(find ~/Images/Wallpapers -follow -maxdepth 1 -type f | shuf -n 1)"
 
