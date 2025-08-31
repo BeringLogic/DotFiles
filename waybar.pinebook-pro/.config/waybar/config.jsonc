@@ -139,7 +139,11 @@
   "battery": {
     "format-charging": "{capacity}%  {icon}",
     "format-discharging": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+      "warning": 25,
+      "critical": 10
+    }
   },
 
   "tray": {
