@@ -213,14 +213,14 @@ display_git_info() {
     GIT_UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name "@{upstream}" 2>/dev/null) && GIT_UPSTREAM="${ZSH_THEME_GIT_PROMPT_UPSTREAM_SEPARATOR}${GIT_UPSTREAM}"
 
     if [ -n "$__CURRENT_GIT_STATUS" ]; then
-		STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_BRANCH$GIT_BRANCH$GIT_UPSTREAM%{${reset_color}%} "
+		STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_BRANCH$GIT_BRANCH$GIT_UPSTREAM%{${reset_color}%}"
+		STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
 		if [ "$GIT_BEHIND" -ne "0" ]; then
 			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND%{${reset_color}%}"
 		fi
 		if [ "$GIT_AHEAD" -ne "0" ]; then
 			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD%{${reset_color}%}"
 		fi
-		STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
 		if [ "$GIT_STAGED" -ne "0" ]; then
 			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED%{${reset_color}%}"
 		fi
