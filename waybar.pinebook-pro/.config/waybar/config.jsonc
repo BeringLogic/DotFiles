@@ -7,7 +7,6 @@
   "modules-center": ["custom/notification", "clock", "systemd-failed-units"],
   "modules-right": [
     "idle_inhibitor",
-    "mpris",
     "bluetooth",
     "pulseaudio",
     "temperature",
