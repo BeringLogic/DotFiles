@@ -137,10 +137,9 @@
   },
 
   "battery": {
-    "format": "{percentage}% {icon}",
-    "format-charging": "{percentage}%  {icon}",
-    "format-discharging": "{percentage}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-charging": "{capacity}%  {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
   },
 
   "tray": {
