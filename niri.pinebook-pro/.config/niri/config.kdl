@@ -431,7 +431,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+W { close-window; }
+    Mod+W repeat=false { close-window; }
 
     Mod+Left  { spawn "~/.local/bin/vim-niri-nav" "left"; }
     Mod+Down  { spawn "~/.local/bin/vim-niri-nav" "down"; }
