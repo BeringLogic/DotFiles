@@ -1,0 +1,136 @@
+@import "mocha.css";
+
+window#waybar {
+  background-color: @base;
+  color: @text;
+  font-family: "Fira Code Nerd Font Propo";
+  font-weight: bold;
+}
+
+#workspaces button {
+  background-color: @surface0;
+  margin: 1px;
+  padding: 0 5px 0 5px;
+  border-radius: 0px;
+}
+#workspaces button.active {
+  color: @green;
+  border: solid 1px @green;
+}
+#workspaces button.urgent {
+  background-color: @red;
+  color: @surface0;
+  border: solid 1px @red;
+}
+
+#submap {
+  background-color: @surface0;
+  padding: 0 6px 0 8px;
+}
+#keyboard-state {
+  background-color: @surface0;
+  padding: 0 5px 0 5px;
+}
+#keyboard-state label.locked {
+  background-color: @green;
+  color: @surface0;
+}
+
+
+#custom-notification {
+  padding: 0 8px 0 5px;
+}
+#custom-notification.notification,
+#custom-notification.dnd-notification,
+#custom-notification.inhibited-notification,
+#custom-notification.dnd-inhibited-notification {
+  background-color: @red;
+  color: @surface0;
+}
+#custom-notification.dnd-notification,
+#custom-notification.dnd-inhibited-notification {
+  padding: 0 10px 0 3px;
+}
+
+#clock {
+  padding: 0 5px 0 5px;
+}
+
+#systemd-failed-units {
+  background-color: @red;
+  color: @surface0; 
+  padding: 0 5px 0 5px;
+}
+
+#idle_inhibitor.deactivated {
+  padding: 0 8px 0 5px;
+}
+#idle_inhibitor.activated {
+  background-color: @peach;
+  color: @surface0;
+  padding: 0 8px 0 5px;
+}
+
+#mpris {
+  background-color: @lavender;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#bluetooth {
+  background-color: @blue;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+#bluetooth.on,
+#bluetooth.off {
+  background-color: @red;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#pulseaudio {
+  background-color: @sapphire;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+#pulseaudio.muted {
+  background-color: @red;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#temperature {
+  background-color: @pink;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#cpu {
+  background-color: @flamingo;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#memory {
+  background-color: @rosewater;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#disk {
+  background-color: @maroon;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#custom-weather {
+  background-color: @yellow;
+  color: @surface0;
+  padding: 0 5px 0 5px;
+}
+
+#tray {
+  background-color: @surface0;
+  padding: 0 5px 0 5px;
+}
