@@ -56,7 +56,7 @@
 
   "systemd-failed-units": {
     "format": "{nr_failed_user} user, {nr_failed_system} system unit(s) failed",
-    "on-click": "$TERMINAL --title=niri-float -e \"~/.local/bin/systemd-failed-units.sh\"",
+    "on-click": "$TERMINAL --title=niri-float -e ~/.local/bin/systemd-failed-units.sh",
   },
 
   "idle_inhibitor": {
@@ -129,18 +129,19 @@
     "format": "/ {percentage_used}%",
     "tooltip-format": "{percentage_used}% used, {free} free, {total} total.",
     "path": "/",
-    "on-click": "$TERMINAL --title=niri-float -e ~/.local/bin/waybar-dysk.sh",
+    "on-click": "$TERMINAL --title=niri-float -e bash -c 'dysk; read -s -n 1'",
   },
   "disk#data": {
     "format": "~/Data {percentage_used}%",
     "tooltip-format": "{percentage_used}% used, {free} free, {total} total.",
     "path": "/home/phil/Data/",
-    "on-click": "$TERMINAL --title=niri-float -e ~/.local/bin/waybar-dysk.sh",
+    "on-click": "$TERMINAL --title=niri-float -e bash -c 'dysk; read -s -n 1'",
   },
 
   "custom/weather": {
     "interval": 3600,
-    "exec": "curl 'wttr.in/Lévis?format=1' | sed 's/   / /'"
+    "exec": "curl 'wttr.in/Lévis?format=1' | sed 's/   / /'",
+    "on-click": "$TERMINAL -e bash -c 'curl wttr.in; read -s -n 1'",
   },
 
   "tray": {
