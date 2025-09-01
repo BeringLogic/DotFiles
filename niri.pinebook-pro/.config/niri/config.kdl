@@ -404,6 +404,7 @@ binds {
     Mod+N       { spawn "swaync-client" "-t" "-sw"; }
     Mod+Shift+N { spawn "alacritty" "-e" "nvim" "~/Documents/Notes"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
+    XF86PowerOff{ spawn "~/.local/bin/rofi-system-menu.sh"; }
     Mod+Shift+C { spawn "alacritty" "-e" "~/.local/bin/edit-config.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
