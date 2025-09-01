@@ -140,7 +140,7 @@
 
   "custom/weather": {
     "interval": 3600,
-    "exec": "curl 'wttr.in/Lévis?format=1' | sed 's/   / /'",
+    "exec": "curl 'wttr.in/Lévis?format=%C%20%t'",
     "on-click": "$TERMINAL -e bash -c 'curl wttr.in; read -s -n 1'",
   },
 
