@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=BlueTUI
 Comment=TUI for bluetooth devices
-Exec=ghostty --title=bluetui -e bluetui
+Exec=alacritty --title=niri-float -e bluetui
 Icon=bluetui
 Terminal=false
 Type=Application
