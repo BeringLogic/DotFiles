@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Wiremix
 Comment=TUI mixer
-Exec=ghostty --title=wiremix -e wiremix
+Exec=alacritty --title=niri-float -e wiremix
 Icon=wiremix
 Terminal=false
 Type=Application
