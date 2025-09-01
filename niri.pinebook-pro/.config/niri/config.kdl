@@ -365,8 +365,7 @@ window-rule {
 }
 
 window-rule {
-    match title="wiremix"
-    match title="bluetui"
+    match title="niri-float"
     open-floating true
 }
 

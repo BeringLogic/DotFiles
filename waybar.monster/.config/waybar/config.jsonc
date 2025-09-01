@@ -56,7 +56,7 @@
 
   "systemd-failed-units": {
     "format": "{nr_failed_user} user, {nr_failed_system} system unit(s) failed",
-    "on-click": "$TERMINAL -e \"~/.local/bin/systemd-failed-units.sh\"",
+    "on-click": "$TERMINAL --title=niri-float -e \"~/.local/bin/systemd-failed-units.sh\"",
   },
 
   "idle_inhibitor": {
@@ -87,7 +87,7 @@
     "format": " {status}",
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "on-click": "$TERMINAL --title=bluetui -e bluetui"
+    "on-click": "$TERMINAL --title=niri-float -e bluetui"
   },
 
   "pulseaudio": {
@@ -107,7 +107,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "$TERMINAL --title=wiremix -e wiremix"
+    "on-click": "$TERMINAL --title=niri-float -e wiremix"
   },
 
   "temperature": {
