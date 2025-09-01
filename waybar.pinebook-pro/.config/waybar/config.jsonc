@@ -112,7 +112,7 @@
   "disk#root": {
     "format": "/ {percentage_used}%",
     "path": "/",
-    "on-click": "$TERMINAL -e 'zsh -c dysk; read -p \"Press any key to exit\" -s -n 1'"
+    "on-click": "$TERMINAL --title niri-float -e ~/.local/bin/waybar-dysk.sh",
   },
 
   "custom/weather": {
