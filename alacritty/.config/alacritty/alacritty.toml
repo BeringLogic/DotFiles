@@ -2,4 +2,5 @@
 general.import = [ "~/.config/alacritty/catppuccin-mocha.toml", ]
 
 window.opacity = 0.9
+window.padding = { x = 10, y = 10 }
 
