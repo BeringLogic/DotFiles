@@ -111,6 +111,7 @@
 
   "disk#root": {
     "format": "/ {percentage_used}%",
+    "tooltip-format": "{percentage_used}% used, {free} free, {total} total.",
     "path": "/",
     "on-click": "$TERMINAL --title niri-float -e ~/.local/bin/waybar-dysk.sh",
   },
