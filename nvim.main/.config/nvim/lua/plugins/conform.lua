@@ -5,7 +5,7 @@ return {
       bash = { "beautysh" },
       lua = { "stylua" },
       go = { "gofumpt" },
-      javascript = { "prettier" },
+      javascript = { "prettierd" },
     },
   },
   keys = {
