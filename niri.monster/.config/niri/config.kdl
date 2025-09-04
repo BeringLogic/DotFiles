@@ -376,13 +376,13 @@ binds {
     // Mod+EACUTE { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return  { spawn "alacritty"; }
+    Mod+Return  { spawn-sh "$TERMINAL"; }
     Mod+P       { spawn "rofi" "-show" "drun" "-show-icons"; }
     Mod+Alt+P   { spawn "rofi" "-show" "ssh"; }
     Mod+N       { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+N { spawn "alacritty" "-e" "bash" "-c" "nvim ~/Documents/Notes"; }
+    Mod+Shift+N { spawn-sh "$TERMINAL -e nvim ~/Documents/Notes"; }
     Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
-    Mod+Shift+C { spawn "alacritty" "-e" "bash" "-c" "~/.local/bin/edit-config.sh"; }
+    Mod+Shift+C { spawn-sh "$TERMINAL -e ~/.local/bin/edit-config.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
     Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
