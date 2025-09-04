@@ -3,7 +3,7 @@ modi: "run,drun,ssh,window";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-font: "Lilex Nerd Font 26";
+font: "Fira Code Nerd Font 26";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
