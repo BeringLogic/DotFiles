@@ -323,21 +323,6 @@ window-rule {
     open-floating true
 }
 
-// border rules
-window-rule {
-    match app-id="org.mozilla.firefox"
-    match app-id="org.mozilla.Thunderbird"
-    border {
-        width 3
-    }
-}
-window-rule {
-    match app-id="org.gnome.Nautilus"
-    border {
-        width 2
-    }
-}
-
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
