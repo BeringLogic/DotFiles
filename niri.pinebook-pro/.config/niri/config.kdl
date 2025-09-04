@@ -8,7 +8,6 @@ environment {
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
-    DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
 }
 
@@ -23,7 +22,6 @@ hotkey-overlay {
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "brightnessctl" "set" "100%"
 spawn-at-startup "udiskie" "-a" "-n" "-s"
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "~/.local/bin/randomize-wallpaper.sh"
 
 // Input device configuration.
