@@ -395,7 +395,7 @@ binds {
     Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
     Mod+B { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
     Mod+D { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-hpbgbcmcjeejgedeekhohdliinhikdhm-Default"; }
-    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser" "Welcome | SceneSat – Brave"; }
+    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Welcome | SceneSat – Mozilla Firefox"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
