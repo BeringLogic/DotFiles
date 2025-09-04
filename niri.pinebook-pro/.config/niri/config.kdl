@@ -390,11 +390,11 @@ binds {
     Mod+Shift+C { spawn-sh "$TERMINAL -e ~/.local/bin/edit-config.sh"; }
     Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
 
-    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
+    Mod+E { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
+    Mod+D { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
     Mod+B { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
-    Mod+D { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser" "Todo List"; }
-    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Welcome | SceneSat – Mozilla Firefox"; }
-    Mod+A { spawn "~/.local/bin/niri-focus-rotate.sh" "Alacritty"; }
+    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Welcome | SceneSat — Mozilla Firefox"; }
+    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "Alacritty"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
