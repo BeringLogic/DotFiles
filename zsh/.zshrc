@@ -34,9 +34,10 @@ case "$DISTRIBUTION" in
   	HISTSIZE=1000
     ;;
 esac
-HISTFILE=~/.histfile
+HISTFILE="$XDG_CACHE_HOME/zsh_history"
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+HISTCONTROL=ignoreboth # consecutive duplicates and commands starting with space are not save
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -50,6 +51,8 @@ setopt hist_find_no_dups
 zstyle :compinstall filename '$HOME/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
+export $(dircolors)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33
 if [ $EUID -gt 0 ]; then
 	autoload -Uz compinit
 	compinit
@@ -72,7 +75,8 @@ esac
 
 # various flags
 unsetopt beep
-setopt hist_ignore_all_dups
+setopt globdots
+stty stop undef # disable accidental ctrl+s
 
 
 # keybindings
@@ -80,8 +84,8 @@ bindkey -e
 bindkey "\e[3~" delete-char
 bindkey "\e[H"  beginning-of-line
 bindkey "\e[F"  end-of-line
-bindkey "\e[1;5D" backward-word
-bindkey "\e[1;5C" forward-word
+bindkey "^J" backward-word
+bindkey "^K" forward-word
 
 
 if [ -d "$HOME/.local/bin" ]; then
