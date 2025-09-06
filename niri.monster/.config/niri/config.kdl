@@ -344,8 +344,22 @@ window-rule {
 }
 
 window-rule {
-    match title="niri-float"
+    match title="wiremix"
+    match title="bluetui"
+    match title="systemd-failed-units"
     open-floating true
+}
+
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+}
+
+window-rule {
+    match title="rmpc"
+    open-floating true
+    min-width 1600
+    default-floating-position x=1760 y=450 relative-to="top-left"
 }
 
 // Example: enable rounded corners for all windows.
@@ -375,21 +389,24 @@ binds {
     // shows a list of important hotkeys.
     // Mod+EACUTE { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return  { spawn-sh "$TERMINAL"; }
-    Mod+P       { spawn "rofi" "-show" "drun" "-show-icons"; }
-    Mod+Alt+P   { spawn "rofi" "-show" "ssh"; }
-    Mod+N       { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+N { spawn-sh "$TERMINAL -e nvim ~/Documents/Notes"; }
-    Mod+S       { spawn "~/.local/bin/rofi-system-menu.sh"; }
-    Mod+Shift+C { spawn-sh "$TERMINAL -e ~/.local/bin/edit-config.sh"; }
-    Mod+Shift+W { spawn "~/.local/bin/randomize-wallpaper.sh"; }
+    // binds for both monster and pinebook-pro
+    Mod+Return    { spawn-sh "$TERMINAL"; }
+    Mod+Space     { spawn "rofi" "-show" "drun" "-show-icons"; }
+    Mod+Alt+Space { spawn "rofi" "-show" "ssh"; }
+    Mod+N         { spawn "swaync-client" "-t" "-sw"; }
+    Mod+Shift+N   { spawn-sh "$TERMINAL -e nvim ~/Documents/Notes"; }
+    Mod+S         { spawn "~/.local/bin/rofi-system-menu.sh"; }
+    Mod+Shift+C   { spawn-sh "$TERMINAL -e ~/.local/bin/edit-config.sh"; }
+    Mod+Shift+W   { spawn "~/.local/bin/randomize-wallpaper.sh"; }
+    Mod+Shift+M   { spawn-sh "pkill wiremix || $TERMINAL --title wiremix -e wiremix"; }
+    Mod+Shift+B   { spawn-sh "pkill bluetui || $TERMINAL --title bluetui -e bluetui"; }
+    Mod+E         { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
+    Mod+D         { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
+    Mod+B         { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
+    Mod+T         { spawn "~/.local/bin/niri-focus-rotate.sh" "Alacritty"; }
 
-    Mod+E { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
-    Mod+D { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
-    Mod+B { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
-    Mod+M { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Welcome | SceneSat — Mozilla Firefox"; }
-    Mod+T { spawn "~/.local/bin/niri-focus-rotate.sh" "Alacritty"; }
+    // binds for monster
+    Mod+M         { spawn-sh "pkill rmpc || $TERMINAL --title rmpc -e rmpc"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
