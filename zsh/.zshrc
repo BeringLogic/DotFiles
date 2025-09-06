@@ -57,6 +57,7 @@ fi
 
 
 # zsh plugins
+source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 case "$DISTRIBUTION" in
 	"manjaro" | "arch" | "archarm")
 		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
