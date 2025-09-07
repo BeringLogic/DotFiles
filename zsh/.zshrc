@@ -134,7 +134,9 @@ alias dcd='docker compose down'
 case "$DISTRIBUTION" in
   "debian")
   	alias cat='batcat --wrap never'
-  	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+    man() {
+      /usr/bin/man $* | batcat -p -l man
+    }
     ;;
   "manjaro" | "arch" | "archarm")
   	alias cat='bat --wrap never'
