@@ -344,6 +344,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="org.mozilla.firefox"
+    match app-id="org.mozilla.Thunderbird"
+    border {
+        width 3
+    }
+}
+
+window-rule {
     match title="wiremix"
     match title="bluetui"
     match title="systemd-failed-units"
