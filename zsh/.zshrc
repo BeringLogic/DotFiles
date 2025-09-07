@@ -51,7 +51,7 @@ setopt hist_find_no_dups
 zstyle :compinstall filename '$HOME/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
-export $(dircolors)
+export $(cat ~/.config/zsh/dircolors)
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33
 if [ $EUID -gt 0 ]; then
 	autoload -Uz compinit
