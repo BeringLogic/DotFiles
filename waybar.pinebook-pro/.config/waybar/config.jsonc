@@ -71,7 +71,7 @@
     "format": " {status}",
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    "on-click": "$TERMINAL --title=niri-float -e bluetui"
+    "on-click": "pkill bluetui || $TERMINAL --title=bluetui -e bluetui"
   },
 
   "pulseaudio": {
@@ -91,7 +91,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "$TERMINAL --title=niri-float -e wiremix"
+    "on-click": "pkill wiremix || $TERMINAL --title=wiremix -e wiremix"
   },
 
   "temperature": {
@@ -113,7 +113,7 @@
     "format": "/ {percentage_used}%",
     "tooltip-format": "{percentage_used}% used, {free} free, {total} total.",
     "path": "/",
-    "on-click": "$TERMINAL --title=niri-float -e bash -c 'dysk; read -s -n 1'",
+    "on-click": "$TERMINAL --title=dysk -e bash -c 'dysk; read -s -n 1'",
   },
 
   "custom/weather": {

@@ -352,6 +352,7 @@ window-rule {
 }
 
 window-rule {
+    match title="dysk"
     match title="wiremix"
     match title="bluetui"
     match title="systemd-failed-units"
