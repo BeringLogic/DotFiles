@@ -144,6 +144,16 @@ case "$DISTRIBUTION" in
     ;;
 esac
 
+# Quick and dirty battery status
+batcap() {
+  BATTERY_CAPACITY=$(\cat /sys/class/power_supply/*battery*/capacity)
+  BATTERY_STATUS=$(\cat /sys/class/power_supply/*battery*/status)
+  [[ "$BATTERY_STATUS" = "Charging" ]] && BATTERY_ICON="󰢝"
+  [[ "$BATTERY_STATUS" = "Charging" ]] || BATTERY_ICON="󰁾"
+
+  echo "$BATTERY_ICON $BATTERY_CAPACITY% ($BATTERY_STATUS)"
+}
+
 
 # Create and go into the directory
 mkdirg() {
