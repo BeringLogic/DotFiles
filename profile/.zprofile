@@ -6,7 +6,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CONFIG_DIRS="$HOME/.config"
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="/home/phil/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME=catppuccin-mocha-green-standard+default
 
