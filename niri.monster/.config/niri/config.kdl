@@ -22,6 +22,7 @@ hotkey-overlay {
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "udiskie" "-a" "-n" "-s"
 spawn-at-startup "~/.local/bin/randomize-wallpaper.sh"
+spawn-sh-at-startup "bluetoothctl connect 94:02:30:26:72:88"
 
 // Input device configuration.
 // Find the full list of options on the wiki:
