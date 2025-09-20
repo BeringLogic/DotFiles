@@ -23,3 +23,4 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 
+export SUDO_PROMPT="$(tput setaf 1 bold)Sudo Password:$(tput sgr0) "
