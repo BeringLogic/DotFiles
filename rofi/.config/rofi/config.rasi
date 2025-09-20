@@ -146,3 +146,8 @@ drun-match-fields: "name,generic,exec";
 
 @import "~/.config/rofi/catppuccin-mocha.rasi"
 @theme "~/.config/rofi/catppuccin-default.rasi"
+
+window {
+  width: 500px;
+}
+

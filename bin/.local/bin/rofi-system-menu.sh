@@ -3,7 +3,7 @@
 if [[ "$(hostnamectl hostname)" == "pinebook-pro" ]] then
   ROFICMD='wofi --show dmenu --width 200 --prompt System --lines 6 --insensitive'
 else
-  ROFICMD='rofi -dmenu -i -p "System menu" -theme-str 'window { width: 500px; }' -no-fixed-num-lines 5'
+  ROFICMD="rofi -dmenu -i -p 'System menu' -no-fixed-num-lines 5"
 fi
 
 monitorOff='󱗤 Monitor Off'
