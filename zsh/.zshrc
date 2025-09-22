@@ -47,11 +47,14 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 
+# LS COLORS
+export LS_COLORS="$(cat ~/.config/zsh/ls_colors)"
+
+
 # Autocomplete (compinstall)
 zstyle :compinstall filename '$HOME/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
-export LS_COLORS="$(cat ~/.config/zsh/ls_colors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma='48;2;255;255;255;38;2;0;0;0'
 if [ $EUID -gt 0 ]; then
 	autoload -Uz compinit
@@ -80,17 +83,31 @@ stty stop undef # disable accidental ctrl+s
 
 
 # keybindings
-bindkey -e
+bindkey -v
 bindkey "\e[3~" delete-char
 bindkey "\e[H"  beginning-of-line
 bindkey "\e[F"  end-of-line
-bindkey "^J" backward-word
-bindkey "^K" forward-word
 
 
+# change cursor shape in vi mode
+zle-keymap-select () {
+  if [[ $KEYMAP == vicmd ]]; then
+    # the command mode for vi
+    echo -ne "\e[2 q"
+  else
+    # the insert mode for vi
+    echo -ne "\e[5 q"
+  fi
+}
+precmd_functions+=(zle-keymap-select)
+zle -N zle-keymap-select
+
+
+# add .local/bin to PATH
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
 
 # TERM for root in debian
 if [[ "$DISTRIBUTION" == "debian" ]]; then
