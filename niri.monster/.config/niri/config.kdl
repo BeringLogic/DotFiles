@@ -21,7 +21,7 @@ hotkey-overlay {
 // See the binds section below for more spawn examples.
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "udiskie" "-a" "-n" "-s"
-spawn-at-startup "~/.local/bin/randomize-wallpaper.sh"
+spawn-at-startup "randomize-wallpaper.sh"
 spawn-sh-at-startup "bluetoothctl connect 94:02:30:26:72:88"
 
 // Input device configuration.
@@ -405,17 +405,17 @@ binds {
     Mod+Space     { spawn "rofi" "-show" "drun" "-show-icons"; }
     Mod+Alt+Space { spawn "rofi" "-show" "ssh"; }
     Mod+N         { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+N   { spawn-sh "$TERMINAL -e nvim ~/Documents/Notes"; }
-    Mod+S         { spawn "~/.local/bin/rofi-system-menu.sh"; }
-    Mod+Shift+C   { spawn-sh "$TERMINAL -e ~/.local/bin/edit-config.sh"; }
-    Mod+Shift+W   { spawn "~/.local/bin/randomize-wallpaper.sh"; }
+    Mod+Shift+N   { spawn-sh "$TERMINAL -e edit-notes.sh"; }
+    Mod+S         { spawn "rofi-system-menu.sh"; }
+    Mod+Shift+C   { spawn-sh "$TERMINAL -e edit-config.sh"; }
+    Mod+Shift+W   { spawn "randomize-wallpaper.sh"; }
     Mod+Shift+M   { spawn-sh "pkill wiremix || $TERMINAL --title wiremix -e wiremix"; }
     Mod+Shift+B   { spawn-sh "pkill bluetui || $TERMINAL --title bluetui -e bluetui"; }
-    Mod+P         { spawn "~/.local/bin/niri-focus-rotate.sh" "Bitwarden"; }
-    Mod+E         { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
-    Mod+D         { spawn "~/.local/bin/niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
-    Mod+B         { spawn "~/.local/bin/niri-focus-rotate.sh" "brave-browser"; }
-    Mod+T         { spawn "~/.local/bin/niri-focus-rotate.sh" "Alacritty"; }
+    Mod+P         { spawn "niri-focus-rotate.sh" "Bitwarden"; }
+    Mod+E         { spawn "niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
+    Mod+D         { spawn "niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
+    Mod+B         { spawn "niri-focus-rotate.sh" "brave-browser"; }
+    Mod+T         { spawn "niri-focus-rotate.sh" "Alacritty"; }
 
     // binds for monster
     Mod+M         { spawn-sh "pkill rmpc || $TERMINAL --title rmpc -e rmpc"; }
@@ -426,9 +426,9 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "~/.local/bin/wpctl.sh" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl.sh" "+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl.sh" "-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl.sh" "toggle"; }
     XF86AudioStop        allow-when-locked=true { spawn "playerctl" "stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
@@ -446,14 +446,14 @@ binds {
 
     Mod+W repeat=false { close-window; }
 
-    Mod+Left  { spawn "~/.local/bin/vim-niri-nav" "left"; }
-    Mod+Down  { spawn "~/.local/bin/vim-niri-nav" "down"; }
-    Mod+Up    { spawn "~/.local/bin/vim-niri-nav" "up"; }
-    Mod+Right { spawn "~/.local/bin/vim-niri-nav" "right"; }
-    Mod+H     { spawn "~/.local/bin/vim-niri-nav" "left"; }
-    Mod+J     { spawn "~/.local/bin/vim-niri-nav" "down"; }
-    Mod+K     { spawn "~/.local/bin/vim-niri-nav" "up"; }
-    Mod+L     { spawn "~/.local/bin/vim-niri-nav" "right"; }
+    Mod+Left  { spawn "vim-niri-nav" "left"; }
+    Mod+Down  { spawn "vim-niri-nav" "down"; }
+    Mod+Up    { spawn "vim-niri-nav" "up"; }
+    Mod+Right { spawn "vim-niri-nav" "right"; }
+    Mod+H     { spawn "vim-niri-nav" "left"; }
+    Mod+J     { spawn "vim-niri-nav" "down"; }
+    Mod+K     { spawn "vim-niri-nav" "up"; }
+    Mod+L     { spawn "vim-niri-nav" "right"; }
 
     Mod+Shift+Left  { move-column-left; }
     Mod+Shift+Down  { move-window-down-or-to-workspace-down; }
@@ -511,15 +511,15 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    // Mod+WheelScrollRight      { spawn "~/.local/bin/vim-niri-nav" "right"; }
-    // Mod+WheelScrollLeft       { spawn "~/.local/bin/vim-niri-nav" "left"; }
+    // Mod+WheelScrollRight      { spawn "vim-niri-nav" "right"; }
+    // Mod+WheelScrollLeft       { spawn "vim-niri-nav" "left"; }
     // Mod+Ctrl+WheelScrollRight { move-column-right; }
     // Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
     // // Usually scrolling up and down with Shift in applications results in
     // // horizontal scrolling; these binds replicate that.
-    // Mod+Shift+WheelScrollDown      { spawn "~/.local/bin/vim-niri-nav" "right"; }
-    // Mod+Shift+WheelScrollUp        { spawn "~/.local/bin/vim-niri-nav" "left"; }
+    // Mod+Shift+WheelScrollDown      { spawn "vim-niri-nav" "right"; }
+    // Mod+Shift+WheelScrollUp        { spawn "vim-niri-nav" "left"; }
     // Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     // Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 

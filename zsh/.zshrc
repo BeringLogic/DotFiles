@@ -103,12 +103,6 @@ precmd_functions+=(zle-keymap-select)
 zle -N zle-keymap-select
 
 
-# add .local/bin to PATH
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-
 # TERM for root in debian
 if [[ "$DISTRIBUTION" == "debian" ]]; then
   export TERM=xterm-256color
