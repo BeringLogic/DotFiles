@@ -402,7 +402,7 @@ binds {
     Mod+Space     { spawn "wofi" "--show" "drun" "--allow-images"; }
     Mod+Alt+Space { spawn "rofi" "-show" "ssh"; }
     Mod+N         { spawn "swaync-client" "-t" "-sw"; }
-    Mod+Shift+N   { spawn-sh "$TERMINAL -e nvim ~/Documents/Notes"; }
+    Mod+Shift+N   { spawn-sh "$TERMINAL -e edit-notes.sh"; }
     Mod+S         { spawn "rofi-system-menu.sh"; }
     Mod+Shift+C   { spawn-sh "$TERMINAL -e edit-config.sh"; }
     Mod+Shift+W   { spawn "randomize-wallpaper.sh"; }
