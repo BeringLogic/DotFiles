@@ -370,7 +370,8 @@ window-rule {
     match title="rmpc"
     open-floating true
     min-width 1600
-    default-floating-position x=1760 y=450 relative-to="top-left"
+    min-height 720
+    default-floating-position x=1760 y=360 relative-to="top-left"
 }
 
 // Example: enable rounded corners for all windows.

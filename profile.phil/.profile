@@ -14,7 +14,7 @@ export SSH_AUTH_SOCK="/home/phil/.var/app/com.bitwarden.desktop/data/.bitwarden-
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME=catppuccin-mocha-green-standard+default
 
-export TERMINAL=/sbin/alacritty
+export TERMINAL=/sbin/kitty
 export EDITOR=/usr/bin/nvim
 export PAGER=/usr/bin/less
 
