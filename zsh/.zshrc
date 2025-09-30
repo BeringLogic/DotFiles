@@ -1,26 +1,26 @@
 # detect distribution
 distribution () {
-	dtype="unknown"
+  dtype="unknown"
 
     if [ -r /etc/os-release ]; then
-		source /etc/os-release
-		case $ID in
-		    debian)
-		        dtype="debian"
-		        ;;
-		    manjaro | manjaro-arm)
-				    dtype="manjaro"
-    				;;
-		    arch)
-    				dtype="arch"
-    				;;
-		    archarm)
-    				dtype="archarm"
-    				;;
-		esac
-	fi
+    source /etc/os-release
+    case $ID in
+        debian)
+            dtype="debian"
+            ;;
+        manjaro | manjaro-arm)
+            dtype="manjaro"
+            ;;
+        arch)
+            dtype="arch"
+            ;;
+        archarm)
+            dtype="archarm"
+            ;;
+    esac
+  fi
 
-	echo $dtype
+  echo $dtype
 }
 DISTRIBUTION=$(distribution)
 
@@ -28,10 +28,10 @@ DISTRIBUTION=$(distribution)
 # History
 case "$DISTRIBUTION" in
   "manjaro" | "arch" | "archarm")
-  	HISTSIZE=10000
+    HISTSIZE=10000
     ;;
   "debian")
-  	HISTSIZE=1000
+    HISTSIZE=1000
     ;;
 esac
 HISTFILE="$XDG_CACHE_HOME/zsh_history"
@@ -57,22 +57,22 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma='48;2;255;255;255;38;2;0;0;0'
 if [ $EUID -gt 0 ]; then
-	autoload -Uz compinit
-	compinit
+  autoload -Uz compinit
+  compinit
 fi
 
 
 # zsh plugins
 source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 case "$DISTRIBUTION" in
-	"manjaro" | "arch" | "archarm")
-		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-		source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-		;;
-	"debian")
-		source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-		source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-		;;
+  "manjaro" | "arch" | "archarm")
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ;;
+  "debian")
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ;;
 esac
 
 
@@ -144,14 +144,14 @@ alias dcd='docker compose down'
 
 case "$DISTRIBUTION" in
   "debian")
-  	alias cat='batcat --wrap never'
+    alias cat='batcat --wrap never'
     man() {
       /usr/bin/man $* | batcat -p -l man
     }
     ;;
   "manjaro" | "arch" | "archarm")
-  	alias cat='bat --wrap never'
-  	alias man='batman'
+    alias cat='bat --wrap never'
+    alias man='batman'
     alias yayf="yay -Slq  | fzf --reverse --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
     ;;
 esac
@@ -169,21 +169,21 @@ batcap() {
 
 # Create and go into the directory
 mkdirg() {
-	mkdir -p "$1"
-	cd "$1"
+  mkdir -p "$1"
+  cd "$1"
 }
 
 
 # ll after cd or z
 function cd() {
-	builtin cd "$@" && ll
+  builtin cd "$@" && ll
 }
 
 
 # Initialize fzf
 case "$DISTRIBUTION" in
   "debian")
-  	source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
     ;;
   "manjaro" | "arch" | "archarm")
     source <(fzf --zsh)
@@ -194,9 +194,9 @@ esac
 # Initialize Zoxide
 eval "$(zoxide init zsh)"
 if [ "$DISTRIBUTION" != "debian" ]; then
-	function z() {
-	    __zoxide_z "$@" && ll
-	}
+  function z() {
+      __zoxide_z "$@" && ll
+  }
 fi
 
 
@@ -208,23 +208,23 @@ setopt promptpercent
 autoload colors; colors;
 
 display_logo() {
-	if [[ $EUID == 0 ]]; then
-		echo "%{$fg[red]%} %{$reset_color%}"
-	else
-		case "$DISTRIBUTION" in
-			"debian")
-				echo "%{$fg[red]%} %{$reset_color%}"
-				;;
-			"manjaro")
-				echo "%{$fg[green]%} %{$reset_color%}"
-				;;
-			"arch" | "archarm")
-				echo "%{$fg[blue]%} %{$reset_color%}"
-				;;
-			*)
-				echo "%{$fg[red]%} %{$reset_color%}"
-		esac
-	fi
+  if [[ $EUID == 0 ]]; then
+    echo "%{$fg[red]%} %{$reset_color%}"
+  else
+    case "$DISTRIBUTION" in
+      "debian")
+        echo "%{$fg[red]%} %{$reset_color%}"
+        ;;
+      "manjaro")
+        echo "%{$fg[green]%} %{$reset_color%}"
+        ;;
+      "arch" | "archarm")
+        echo "%{$fg[blue]%} %{$reset_color%}"
+        ;;
+      *)
+        echo "%{$fg[red]%} %{$reset_color%}"
+    esac
+  fi
 }
 display_git_info() {
     _GIT_STATUS=$(gitstatus.py 2>/dev/null)
@@ -242,39 +242,39 @@ display_git_info() {
     GIT_UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name "@{upstream}" 2>/dev/null) && GIT_UPSTREAM="${ZSH_THEME_GIT_PROMPT_UPSTREAM_SEPARATOR}${GIT_UPSTREAM}"
 
     if [ -n "$__CURRENT_GIT_STATUS" ]; then
-		STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_BRANCH$GIT_BRANCH$GIT_UPSTREAM%{${reset_color}%}"
-		STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
-		if [ "$GIT_BEHIND" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND%{${reset_color}%}"
-		fi
-		if [ "$GIT_AHEAD" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD%{${reset_color}%}"
-		fi
-		if [ "$GIT_STAGED" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED%{${reset_color}%}"
-		fi
-		if [ "$GIT_CONFLICTS" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS$GIT_CONFLICTS%{${reset_color}%}"
-		fi
-		if [ "$GIT_CHANGED" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED$GIT_CHANGED%{${reset_color}%}"
-		fi
-		if [ "$GIT_DELETED" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_DELETED$GIT_DELETED%{${reset_color}%}"
-		fi
-		if [ "$GIT_UNTRACKED" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED$GIT_UNTRACKED%{${reset_color}%}"
-		fi
-		if [ "$GIT_STASHED" -ne "0" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STASHED$GIT_STASHED%{${reset_color}%}"
-		fi
-		if [ "$GIT_CLEAN" -eq "1" ]; then
-			STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
-		fi
-		STATUS="$STATUS%{${reset_color}%}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-	else
-		STATUS=""
-	fi
+    STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_BRANCH$GIT_BRANCH$GIT_UPSTREAM%{${reset_color}%}"
+    STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+    if [ "$GIT_BEHIND" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND%{${reset_color}%}"
+    fi
+    if [ "$GIT_AHEAD" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD%{${reset_color}%}"
+    fi
+    if [ "$GIT_STAGED" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED%{${reset_color}%}"
+    fi
+    if [ "$GIT_CONFLICTS" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS$GIT_CONFLICTS%{${reset_color}%}"
+    fi
+    if [ "$GIT_CHANGED" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED$GIT_CHANGED%{${reset_color}%}"
+    fi
+    if [ "$GIT_DELETED" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_DELETED$GIT_DELETED%{${reset_color}%}"
+    fi
+    if [ "$GIT_UNTRACKED" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED$GIT_UNTRACKED%{${reset_color}%}"
+    fi
+    if [ "$GIT_STASHED" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STASHED$GIT_STASHED%{${reset_color}%}"
+    fi
+    if [ "$GIT_CLEAN" -eq "1" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
+    fi
+    STATUS="$STATUS%{${reset_color}%}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  else
+    STATUS=""
+  fi
 
     echo "$STATUS"
 }
