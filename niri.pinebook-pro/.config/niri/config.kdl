@@ -351,9 +351,15 @@ window-rule {
 window-rule {
     match app-id="org.mozilla.firefox"
     match app-id="org.mozilla.Thunderbird"
-    match app-id="nautilus"
     border {
         width 3
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Loupe"
+    border {
+        width 2
     }
 }
 

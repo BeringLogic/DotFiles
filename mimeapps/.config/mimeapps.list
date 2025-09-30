@@ -1,5 +1,6 @@
 [Default Applications]
 inode/directory=org.gnome.Nautilus.desktop
+x-content/unix-software=org.gnome.Nautilus.desktop
 
 text/plain=nvim.desktop
 
@@ -21,9 +22,10 @@ message/rfc822=userapp-Thunderbird-DVHR72.desktop
 text/calendar=userapp-Thunderbird-RDRQ72.desktop
 application/x-extension-ics=userapp-Thunderbird-RDRQ72.desktop
 
-image/x-xbitmap=swayimg.desktop;gimp.desktop;
-image/jpeg=swayimg.desktop;gimp.desktop;
-image/jpg=swayimg.desktop;gimp.desktop;
-image/png=swayimg.desktop;gimp.desktop;
-image/bmp=swayimg.desktop;gimp.desktop;
-image/webp=swayimg.desktop;gimp.desktop;
+image/x-xbitmap=org.gnome.Loupe.desktop;gimp.desktop;
+image/jpeg=org.gnome.Loupe.desktop;gimp.desktop;
+image/jpg=org.gnome.Loupe.desktop;gimp.desktop;
+image/png=org.gnome.Loupe.desktop;gimp.desktop;
+image/bmp=org.gnome.Loupe.desktop;gimp.desktop;
+image/webp=org.gnome.Loupe.desktop;gimp.desktop;
+
