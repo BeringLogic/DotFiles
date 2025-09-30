@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd ~/.config
-selection=$(fd -L . | fzf)
+cd ~/.DotFiles
+selection=$(fd -L -H . | fzf)
 
 if [ -n "$selection" ]; then
   nvim "$selection"
