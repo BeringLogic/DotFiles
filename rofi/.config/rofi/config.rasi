@@ -25,8 +25,8 @@ drun-match-fields: "name,exec";
 drun-display-format: "{name}";
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: ;*/
+	sort: true;
+	sorting-method: "fzf";
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
@@ -35,7 +35,7 @@ drun-display-format: "{name}";
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modi: "window,run";*/
-/*	matching: "normal";*/
+	matching: "fuzzy";
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	line-margin: 2;*/
