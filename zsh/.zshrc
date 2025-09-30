@@ -152,6 +152,7 @@ case "$DISTRIBUTION" in
   "manjaro" | "arch" | "archarm")
   	alias cat='bat --wrap never'
   	alias man='batman'
+    alias yayf="yay -Slq  | fzf --reverse --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
     ;;
 esac
 
