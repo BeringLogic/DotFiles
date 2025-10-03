@@ -48,7 +48,7 @@ setopt hist_find_no_dups
 
 
 # LS and FZF colors
-(cat ~/.cache/wal/colors.sh)
+source ~/.cache/wal/colors.sh
 
 
 # Autocomplete (compinstall)
