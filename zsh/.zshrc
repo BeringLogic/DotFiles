@@ -47,8 +47,8 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 
-# LS COLORS
-export LS_COLORS="$(cat ~/.config/zsh/ls_colors)"
+# LS and FZF colors
+(cat ~/.cache/wal/colors.sh)
 
 
 # Autocomplete (compinstall)

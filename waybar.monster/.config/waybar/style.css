@@ -1,100 +1,107 @@
-@import "mocha.css";
+@import "colors-waybar.css";
 
 window#waybar {
-  background-color: @base;
+  background-color: @color0;
   font-family: "Fira Code Nerd Font Propo";
   font-weight: bold;
 }
 
 label.module {
-  color: @surface0;
   padding: 0 5px 0 5px;
+  color: @color15;
 }
 
 #workspaces button {
-  background-color: @surface0;
+  background-color: @color8;
   margin: 1px;
   border-radius: 0px;
 }
 #workspaces button.active {
-  color: @green;
-  border: solid 1px @green;
+  color: @color2;
+  border: solid 1px @color2;
 }
 #workspaces button.urgent {
-  background-color: @red;
-  border: solid 1px @red;
+  background-color: @color1;
+  border: solid 1px @color1;
 }
 
 #custom-notification {
-  color: @text;
+  color: @color15;
 }
 #custom-notification.notification,
 #custom-notification.dnd-notification,
 #custom-notification.inhibited-notification,
 #custom-notification.dnd-inhibited-notification {
-  background-color: @red;
-  color: @surface0;
+  color: @color0;
+  background-color: @color1;
 }
 #custom-notification.dnd-notification,
 #custom-notification.dnd-inhibited-notification {
-  color: @surface0;
+  color: @color0;
 }
 
 #clock {
-  color: @text;
+  color: @color15;
 }
 
 #systemd-failed-units {
-  background-color: @red;
+  background-color: @color1;
 }
 
 #idle_inhibitor.deactivated {
-  color: @text;
+  color: @color15;
 }
 #idle_inhibitor.activated {
-  background-color: @peach;
+  background-color: @color3;
 }
 
 #mpris {
-  background-color: @lavender;
+  background-color: @color6;
 }
 
 #bluetooth {
-  background-color: @blue;
+  background-color: @color4;
 }
 #bluetooth.on,
 #bluetooth.off {
-  background-color: @red;
+  background-color: @color1;
 }
 
 #pulseaudio {
-  background-color: @sapphire;
+  background-color: @color12;
 }
 #pulseaudio.muted {
-  background-color: @red;
+  background-color: @color1;
 }
 
 #temperature {
-  background-color: @pink;
+  background-color: @color6;
 }
 
 #cpu {
-  background-color: @flamingo;
+  background-color: @color14;
 }
 
 #memory {
-  background-color: @rosewater;
+  background-color: @color6;
 }
 
 #disk {
-  background-color: @maroon;
+  background-color: @color14;
 }
 
 #custom-weather {
-  background-color: @yellow;
+  background-color: @color11;
+}
+
+#battery {
+  background-color: @color4;
+}
+#battery.low {
+  background-color: @color9;
 }
 
 #tray {
-  background-color: @surface0;
+  background-color: @color0;
   padding: 0 5px 0 5px;
 }

@@ -144,8 +144,8 @@ drun-display-format: "{name}";
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
-@import "~/.config/rofi/catppuccin-mocha.rasi"
-@theme "~/.config/rofi/catppuccin-default.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
 
 window {
   width: 500px;

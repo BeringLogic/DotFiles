@@ -7,7 +7,7 @@ return {
 
     lualine.setup({
       options = {
-        theme = "catppuccin",
+        theme = "pywal16-nvim",
       },
       sections = {
         lualine_x = {
