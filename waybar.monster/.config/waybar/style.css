@@ -1,24 +1,25 @@
 @import "colors-waybar.css";
 
 window#waybar {
-  background-color: @color0;
+  background-color: @color1;
   font-family: "Fira Code Nerd Font Propo";
   font-weight: bold;
 }
 
 label.module {
   padding: 0 5px 0 5px;
-  color: @color15;
+  text-shadow: -1px -1px 0 @color1, 0 -1px 0 @color1, 1px -1px 0 @color1, 1px 0 0 @color1, 1px 1px 0 @color1, 0 1px 0 @color1, -1px 1px 0 @color1, -1px 0 0 @color1;
+  color: @color7;
 }
 
 #workspaces button {
-  background-color: @color8;
+  background-color: @color5;
   margin: 1px;
   border-radius: 0px;
 }
 #workspaces button.active {
-  color: @color2;
-  border: solid 1px @color2;
+  color: @color15;
+  text-shadow: -1px -1px 0 @color1, 0 -1px 0 @color1, 1px -1px 0 @color1, 1px 0 0 @color1, 1px 1px 0 @color1, 0 1px 0 @color1, -1px 1px 0 @color1, -1px 0 0 @color1;
 }
 #workspaces button.urgent {
   background-color: @color1;
@@ -26,22 +27,19 @@ label.module {
 }
 
 #custom-notification {
-  color: @color15;
+  color: @color7;
 }
-#custom-notification.notification,
+#custom-notification.notification {
+  background-color: red;
+}
 #custom-notification.dnd-notification,
 #custom-notification.inhibited-notification,
 #custom-notification.dnd-inhibited-notification {
-  color: @color0;
-  background-color: @color1;
-}
-#custom-notification.dnd-notification,
-#custom-notification.dnd-inhibited-notification {
-  color: @color0;
+  color: red;
 }
 
 #clock {
-  color: @color15;
+  color: @color7;
 }
 
 #systemd-failed-units {
@@ -49,10 +47,10 @@ label.module {
 }
 
 #idle_inhibitor.deactivated {
-  color: @color15;
+  color: @color7;
 }
 #idle_inhibitor.activated {
-  background-color: @color3;
+  background-color: red;
 }
 
 #mpris {
@@ -62,16 +60,18 @@ label.module {
 #bluetooth {
   background-color: @color4;
 }
-#bluetooth.on,
+#bluetooth.on {
+  background-color: yellow;
+}
 #bluetooth.off {
-  background-color: @color1;
+  background-color: red;
 }
 
 #pulseaudio {
   background-color: @color12;
 }
 #pulseaudio.muted {
-  background-color: @color1;
+  background-color: red;
 }
 
 #temperature {
@@ -83,11 +83,11 @@ label.module {
 }
 
 #memory {
-  background-color: @color6;
+  background-color: @color14;
 }
 
 #disk {
-  background-color: @color14;
+  background-color: @color6;
 }
 
 #custom-weather {
@@ -98,10 +98,10 @@ label.module {
   background-color: @color4;
 }
 #battery.low {
-  background-color: @color9;
+  background-color: red;
 }
 
 #tray {
-  background-color: @color0;
+  background-color: @color1;
   padding: 0 5px 0 5px;
 }
