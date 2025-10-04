@@ -21,7 +21,7 @@ hotkey-overlay {
 // See the binds section below for more spawn examples.
 spawn-at-startup "wlsunset" "-l" "45.5" "-L" "-75.8"
 spawn-at-startup "udiskie" "-a" "-n" "-s"
-spawn-at-startup "randomize-wallpaper.sh"
+spawn-at-startup "change-wallpaper.sh"
 spawn-sh-at-startup "bluetoothctl connect 94:02:30:26:72:88"
 
 // Input device configuration.
@@ -415,7 +415,7 @@ binds {
     Mod+Shift+N   { spawn-sh "$TERMINAL -e edit-notes.sh"; }
     Mod+S         { spawn "rofi-system-menu.sh"; }
     Mod+Shift+C   { spawn-sh "$TERMINAL -e edit-config.sh"; }
-    Mod+Shift+W   { spawn "randomize-wallpaper.sh"; }
+    Mod+Shift+W   { spawn "change-wallpaper.sh"; }
     Mod+Shift+M   { spawn-sh "pkill wiremix || $TERMINAL --title wiremix -e wiremix"; }
     Mod+Shift+B   { spawn-sh "pkill bluetui || $TERMINAL --title bluetui -e bluetui"; }
     Mod+P         { spawn "niri-focus-rotate.sh" "Bitwarden"; }
