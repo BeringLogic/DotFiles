@@ -1,0 +1,266 @@
+set background=dark
+if exists('g:colors_name')
+hi clear
+if exists('syntax_on')
+syntax reset
+endif
+endif
+let g:colors_name = 'lushwal'
+highlight Normal guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link User Normal
+highlight Bold guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight Boolean guifg=#513934 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Character guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight ColorColumn guifg=#6A727C guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Comment guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight Conceal guifg=#5C6570 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link Whitespace Conceal
+highlight Conditional guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Constant guifg=#513934 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Cursor guifg=NONE guibg=#C3C4C6 guisp=NONE blend=NONE gui=NONE
+highlight CursorColumn guifg=#6A727C guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight CursorLine guifg=NONE guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight CursorLineNr guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Debug guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Define guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Delimiter guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticError guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticHint guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticInfo guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticUnderlineError guifg=#323639 guibg=NONE guisp=#323639 blend=NONE gui=underline
+highlight DiagnosticUnderlineHint guifg=#9A5532 guibg=NONE guisp=#9A5532 blend=NONE gui=underline
+highlight DiagnosticUnderlineInfo guifg=#9A5028 guibg=NONE guisp=#9A5028 blend=NONE gui=underline
+highlight DiagnosticUnderlineWarn guifg=#763828 guibg=NONE guisp=#763828 blend=NONE gui=underline
+highlight DiagnosticWarn guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffAdd guifg=#6C2B23 guibg=#5C6570 guisp=NONE blend=NONE gui=bold
+highlight! link DiffAdded DiffAdd
+highlight DiffChange guifg=#7C838D guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight DiffDelete guifg=#323639 guibg=#5C6570 guisp=NONE blend=NONE gui=bold
+highlight! link DiffRemoved DiffDelete
+highlight! link diffRemoved DiffDelete
+highlight DiffFile guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffLine guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffNewFile guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffText guifg=#9A5028 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight Directory guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight EndOfBuffer guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Error guifg=#323639 guibg=#C3C4C6 guisp=NONE blend=NONE gui=NONE
+highlight ErrorMsg guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Exception guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Float guifg=#513934 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight FoldColumn guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Folded guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=italic
+highlight Function guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight GitSignsAdd guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight GitSignsChange guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight GitSignsDelete guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight HopNextKey guifg=#43474C guibg=#0D141C guisp=NONE blend=NONE gui=bold
+highlight HopNextKey1 guifg=#AFDB75 guibg=#0D141C guisp=NONE blend=NONE gui=bold
+highlight HopNextKey2 guifg=#9FD459 guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight HopUnmatched guifg=#7C838D guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight Identifier guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight IncSearch guifg=#5C6570 guibg=#513934 guisp=NONE blend=NONE gui=NONE
+highlight Include guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Italic guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight Keyword guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Label guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight LineNr guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Macro guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MatchParen guifg=#C3C4C6 guibg=#7C838D guisp=NONE blend=NONE gui=NONE
+highlight MiniCompletionActiveParameter guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniCursorword guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+highlight! link MiniCursorwordCurrent MiniCursorword
+highlight MiniIndentscopePrefix guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=nocombine
+highlight MiniIndentscopeSymbol guifg=#5C6570 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniJump guifg=#9A5028 guibg=NONE guisp=#7C838D blend=NONE gui=underline
+highlight MiniJump2dSpot guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=undercurl
+highlight MiniStarterCurrent guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStarterFooter guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight MiniStarterHeader guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight MiniStarterInactive guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight MiniStarterItem guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStarterItemBullet guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStarterItemPrefix guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStarterQuery guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStarterSection guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineDevinfo guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineFileinfo guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineFilename guifg=#763828 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineInactive guifg=#6A727C guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeCommand guifg=NONE guibg=#9A5532 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeInsert guifg=NONE guibg=#9A5028 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeNormal guifg=NONE guibg=#6C2B23 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeOther guifg=NONE guibg=#AFDB75 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeReplace guifg=NONE guibg=#323639 guisp=NONE blend=NONE gui=NONE
+highlight MiniStatuslineModeVisual guifg=NONE guibg=#513934 guisp=NONE blend=NONE gui=NONE
+highlight MiniSurround guifg=#5C6570 guibg=#513934 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineCurrent guifg=#7C838D guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineFill guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineHidden guifg=#6C2B23 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineModifiedCurrent guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineModifiedHidden guifg=#6A727C guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineModifiedVisible guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTablineVisible guifg=#7C838D guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight MiniTestEmphasis guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight MiniTestFail guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight MiniTestPass guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight MiniTrailspace guifg=#323639 guibg=#C3C4C6 guisp=NONE blend=NONE gui=NONE
+highlight ModeMsg guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight MoreMsg guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NonText guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Number guifg=#513934 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeEmptyFolderName guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeFolderIcon guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeFolderName guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeGitDeleted guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeGitDirty guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeGitNew guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeImageFile guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeIndentMarker guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeNormal guifg=#8F9399 guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeOpenedFile guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeOpenedFolderName guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeRootFolder guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight NvimTreeSpecialFile guifg=#C96659 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeStatuslineNc guifg=#0D141C guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeSymlink guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight NvimTreeVertSplit guifg=#0D141C guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight Operator guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight PMenu guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight PMenuSel guifg=#C3C4C6 guibg=#9A5028 guisp=NONE blend=NONE gui=NONE
+highlight PmenuSbar guifg=#6A727C guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight PmenuThumb guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight PreProc guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Question guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Repeat guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Search guifg=#7C838D guibg=#763828 guisp=NONE blend=NONE gui=NONE
+highlight! link MiniTablineTabpagesection Search
+highlight SignColumn guifg=#6A727C guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Special guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight SpecialChar guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight SpecialKey guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight SpellBad guifg=#323639 guibg=NONE guisp=#323639 blend=NONE gui=underline
+highlight SpellCap guifg=#763828 guibg=NONE guisp=#763828 blend=NONE gui=underline
+highlight SpellLocal guifg=#9A5532 guibg=NONE guisp=#9A5532 blend=NONE gui=underline
+highlight SpellRare guifg=#AFDB75 guibg=NONE guisp=#AFDB75 blend=NONE gui=underline
+highlight Statement guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight StatusLine guifg=#8F9399 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight StatusLineNC guifg=#6A727C guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight StatusLineTerm guifg=#8E392E guibg=#6C2B23 guisp=NONE blend=NONE gui=NONE
+highlight StatusLineTermNC guifg=#A04D37 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight StorageClass guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight String guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Structure guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight TabLine guifg=#7C838D guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight TabLineFill guifg=#7C838D guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight TabLineSel guifg=#6C2B23 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight Tag guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Title guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight Todo guifg=#763828 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight TooLong guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Type guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Typedef guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Underlined guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight VertSplit guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link WinSeparator VertSplit
+highlight Visual guifg=NONE guibg=#6A727C guisp=NONE blend=NONE gui=NONE
+highlight VisualNOS guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WarningMsg guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKey guifg=#C96659 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKeyDesc guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKeyFloat guifg=NONE guibg=#0D141C guisp=NONE blend=NONE gui=NONE
+highlight WhichKeyGroup guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKeySeparator guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKeySeperator guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WhichKeyValue guifg=#7C838D guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WildMenu guifg=#C3C4C6 guibg=#9A5028 guisp=NONE blend=NONE gui=NONE
+highlight WinBar guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight WinBarNC guifg=#6A727C guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight gitCommitOverflow guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight gitCommitSummary guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight helpCommand guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight helpExample guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight mkdBold guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight! link markdownBold mkdBold
+highlight mkdCode guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link markdownCode mkdCode
+highlight mkdCodeBlock guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link markdownCodeBlock mkdCodeBlock
+highlight mkdCodeDelimiter guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight! link markdownCodeDelimiter mkdCodeDelimiter
+highlight mkdError guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link markdownError mkdError
+highlight mkdH1 guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight! link markdownH1 mkdH1
+highlight mkdH2 guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight! link markdownH2 mkdH2
+highlight mkdHeadingDelimiter guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link markdownHeadingDelimiter mkdHeadingDelimiter
+highlight mkdItalic guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight! link markdownItalic mkdItalic
+highlight @attribute guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @boolean guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @character guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @character.special guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @comment guifg=#8F9399 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight @conditional guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @constant guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @constant.builtin guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @constant.macro guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @constructor guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @debug guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @define guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @exception guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @field guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @float guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @function guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @function.builtin guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @function.macro guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @include guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @keyword guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @keyword.function guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @keyword.operator guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @label guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @method guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @namespace guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @none guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @number guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @operator guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @parameter guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @preproc guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @property guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @punctuation.bracket guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @punctuation.delimiter guifg=#C3C4C6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @punctuation.special guifg=#CD6E42 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight @repeat guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @storageclass guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @string guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @string.escape guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @string.regex guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @string.special guifg=#3C393A guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @symbol guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @tag guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @tag.attribute guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @tag.delimiter guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.bold guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight @text.danger guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.diff.add guifg=#6C2B23 guibg=#5C6570 guisp=NONE blend=NONE gui=bold
+highlight @text.diff.delete guifg=#323639 guibg=#5C6570 guisp=NONE blend=NONE gui=bold
+highlight @text.emphasis guifg=#AFDB75 guibg=NONE guisp=NONE blend=NONE gui=italic
+highlight @text.environment guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.environment.name guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.literal guifg=#6C2B23 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.math guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.note guifg=#9A5532 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.reference guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @text.strike guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=strikethrough
+highlight @text.title guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=bold
+highlight @text.todo guifg=#763828 guibg=#5C6570 guisp=NONE blend=NONE gui=NONE
+highlight @text.underline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+highlight @text.uri guifg=NONE guibg=#5C6570 guisp=NONE blend=NONE gui=underline
+highlight @type guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @type.builtin guifg=#9A5028 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @type.definition guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @variable guifg=#763828 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight @variable.builtin guifg=#323639 guibg=NONE guisp=NONE blend=NONE gui=NONE
