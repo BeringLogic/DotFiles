@@ -41,4 +41,4 @@ case "$1" in
 esac
 
 wal --cols16 -i "$SELECTION"
-
+pywal-colors-niri.sh
