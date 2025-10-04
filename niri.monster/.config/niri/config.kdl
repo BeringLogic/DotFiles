@@ -422,7 +422,7 @@ binds {
     Mod+E         { spawn "niri-focus-rotate.sh" "org.mozilla.Thunderbird"; }
     Mod+D         { spawn "niri-focus-rotate.sh" "org.mozilla.firefox" "Todo List — Mozilla Firefox"; }
     Mod+B         { spawn "niri-focus-rotate.sh" "brave-browser"; }
-    Mod+T         { spawn "niri-focus-rotate.sh" "Alacritty"; }
+    Mod+T         { spawn "niri-focus-rotate.sh" "kitty"; }
 
     // binds for monster
     Mod+M         { spawn-sh "pkill rmpc || $TERMINAL --title rmpc -e rmpc"; }

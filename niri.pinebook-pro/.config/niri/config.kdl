@@ -190,10 +190,10 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#a6e3a1"
+        active-color "#2485B6"
 
         // Color of the ring on inactive monitors.
-        inactive-color "#9399b2"
+        inactive-color "#325b71"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -218,8 +218,8 @@ layout {
         // off
 
         width 1
-        active-color "#a6e3a1"
-        inactive-color "#9399b2"
+        active-color "#2485B6"
+        inactive-color "#325b71"
 
         // Color of the border around windows that request your attention.
         urgent-color "#f38ba8"
@@ -284,7 +284,7 @@ layout {
 
 overview {
     zoom 0.25
-    backdrop-color "#313244"
+    backdrop-color "#325b71"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
