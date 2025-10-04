@@ -5,6 +5,11 @@
 #
 
 WALLPAPER_FOLDER="$HOME/Images/Wallpapers"
+
+# I went through all that trouble below but give wal a folder and it will do it for you...
+wal --cols16 -i "$WALLPAPER_FOLDER"
+exit 0
+
 WP_COUNT=$(ls -1 $WALLPAPER_FOLDER | wc -l)
 CURRENT="$(swww query | cut -d : -f 5 | sed -e 's/^ *//')"
 
