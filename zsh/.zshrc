@@ -48,6 +48,7 @@ setopt hist_find_no_dups
 
 
 # LS and FZF colors
+export LS_COLORS="$(cat ~/.config/zsh/ls_colors)"
 source ~/.cache/wal/colors.sh
 
 
