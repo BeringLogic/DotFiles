@@ -181,6 +181,12 @@ function cd() {
 }
 
 
+# create a backup of $1
+function cp~() {
+  cp -r "$1" "$1~"
+}
+
+
 # Initialize fzf
 case "$DISTRIBUTION" in
   "debian")
