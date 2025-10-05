@@ -42,3 +42,6 @@ esac
 
 wal --cols16 -i "$SELECTION"
 pywal-colors-niri.sh
+
+notify-send "$(basename "$SELECTION")"
+
